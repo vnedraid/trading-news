@@ -1,1 +1,1 @@
-# trading-news
+# trading-news fronten
