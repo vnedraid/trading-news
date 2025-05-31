@@ -1,1 +1,1 @@
-# trading-news fronten
+# trading-news frontend

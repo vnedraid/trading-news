@@ -1,8 +1,25 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory,
+  type RouteRecordRaw,
+} from "vue-router";
 
-import Main from "../pages/Main.vue";
+import ChatLayout from "./layouts/ChatLayout.vue";
+import type { Component } from "vue";
 
-const routes = [{ path: "/", component: Main }];
+declare module "vue-router" {
+  interface RouteMeta {
+    layout?: Component;
+  }
+}
+
+const routes: RouteRecordRaw[] = [
+  {
+    path: "/",
+    component: () => import("@/pages/Main.vue"),
+    meta: { layout: ChatLayout },
+  },
+];
 
 export const router = createRouter({
   history: createWebHistory(),
