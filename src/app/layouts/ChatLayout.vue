@@ -1,10 +1,48 @@
+<script lang="ts">
+export const iframeHeight = "800px";
+export const description = "A left and right sidebar.";
+</script>
+
+<script setup lang="ts">
+import SidebarLeft from "@/components/SidebarLeft.vue";
+import SidebarRight from "@/components/SidebarRight.vue";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbList,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
+import { Separator } from "@/components/ui/separator";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
+</script>
+
 <template>
-  <div>
-    ChatLayout
-    <slot />
-  </div>
+  <SidebarProvider>
+    <SidebarLeft />
+    <SidebarInset>
+      <header
+        class="sticky top-0 flex h-14 shrink-0 items-center gap-2 bg-background"
+      >
+        <div class="flex flex-1 items-center gap-2 px-3">
+          <SidebarTrigger />
+          <Separator orientation="vertical" class="mr-2 h-4" />
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbPage class="line-clamp-1">
+                  Project Management & Task Tracking
+                </BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </header>
+      <slot />
+    </SidebarInset>
+    <SidebarRight />
+  </SidebarProvider>
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>

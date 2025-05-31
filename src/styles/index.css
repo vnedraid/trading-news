@@ -1,4 +1,10 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"); */
+@import "./fonts.css";
 @import "./global.css";
+
+@theme {
+  --font-sans: "Geist", sans-serif;
+}
 
 * {
   box-sizing: border-box;
@@ -7,7 +13,6 @@
 html {
   width: 100%;
   max-width: 100%;
-  font-family: TTCommons;
   word-break: break-word;
   overflow-x: hidden;
   scroll-behavior: smooth;
