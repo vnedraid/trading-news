@@ -1,159 +1,168 @@
 <script setup lang="ts">
 import type { SidebarProps } from "@/components/ui/sidebar";
+
+import {
+  AudioWaveform,
+  BookOpen,
+  Bot,
+  Command,
+  Frame,
+  GalleryVerticalEnd,
+  Map,
+  PieChart,
+  Settings2,
+  SquareTerminal,
+  LayoutDashboard,
+} from "lucide-vue-next";
+import NavMain from "@/components/NavMain.vue";
+import NavProjects from "@/components/NavProjects.vue";
+import NavUser from "@/components/NavUser.vue";
+import TeamSwitcher from "@/components/TeamSwitcher.vue";
+
 import {
   Sidebar,
   SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
+  SidebarFooter,
+  SidebarHeader,
   SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
   SidebarRail,
 } from "@/components/ui/sidebar";
+import NavMainSimple from "./NavMainSimple.vue";
+import { useRoute } from "vue-router";
 
-const props = defineProps<SidebarProps>();
+const props = withDefaults(defineProps<SidebarProps>(), {
+  collapsible: "icon",
+});
+
+const route = useRoute();
 
 // This is sample data.
 const data = {
+  user: {
+    name: "shadcn",
+    email: "m@example.com",
+    avatar: "/avatars/shadcn.jpg",
+  },
+  teams: [
+    {
+      name: "Acme Inc",
+      logo: GalleryVerticalEnd,
+      plan: "Enterprise",
+    },
+    {
+      name: "Acme Corp.",
+      logo: AudioWaveform,
+      plan: "Startup",
+    },
+    {
+      name: "Evil Corp.",
+      logo: Command,
+      plan: "Free",
+    },
+  ],
   navMain: [
     {
-      title: "Getting Started",
+      title: "Playground",
       url: "#",
+      icon: SquareTerminal,
+      isActive: route.name === "chat",
       items: [
         {
-          title: "Installation",
+          title: "History",
           url: "#",
         },
         {
-          title: "Project Structure",
+          title: "Starred",
+          url: "#",
+        },
+        {
+          title: "Settings",
           url: "#",
         },
       ],
     },
     {
-      title: "Building Your Application",
+      title: "Dashboards",
       url: "#",
+      icon: LayoutDashboard,
+      isActive: route.name === "dashboard",
       items: [
         {
-          title: "Routing",
+          title: "Genesis",
           url: "#",
         },
         {
-          title: "Data Fetching",
-          url: "#",
-          isActive: true,
-        },
-        {
-          title: "Rendering",
+          title: "Explorer",
           url: "#",
         },
         {
-          title: "Caching",
-          url: "#",
-        },
-        {
-          title: "Styling",
-          url: "#",
-        },
-        {
-          title: "Optimizing",
-          url: "#",
-        },
-        {
-          title: "Configuring",
-          url: "#",
-        },
-        {
-          title: "Testing",
-          url: "#",
-        },
-        {
-          title: "Authentication",
-          url: "#",
-        },
-        {
-          title: "Deploying",
-          url: "#",
-        },
-        {
-          title: "Upgrading",
-          url: "#",
-        },
-        {
-          title: "Examples",
+          title: "Quantum",
           url: "#",
         },
       ],
     },
     {
-      title: "API Reference",
+      title: "Documentation",
       url: "#",
+      icon: BookOpen,
       items: [
         {
-          title: "Components",
+          title: "Introduction",
           url: "#",
         },
         {
-          title: "File Conventions",
+          title: "Get Started",
           url: "#",
         },
         {
-          title: "Functions",
+          title: "Tutorials",
           url: "#",
         },
         {
-          title: "next.config.js Options",
-          url: "#",
-        },
-        {
-          title: "CLI",
-          url: "#",
-        },
-        {
-          title: "Edge Runtime",
+          title: "Changelog",
           url: "#",
         },
       ],
     },
     {
-      title: "Architecture",
+      title: "Settings",
       url: "#",
+      icon: Settings2,
       items: [
         {
-          title: "Accessibility",
+          title: "General",
           url: "#",
         },
         {
-          title: "Fast Refresh",
+          title: "Team",
           url: "#",
         },
         {
-          title: "Next.js Compiler",
+          title: "Billing",
           url: "#",
         },
         {
-          title: "Supported Browsers",
-          url: "#",
-        },
-        {
-          title: "Turbopack",
+          title: "Limits",
           url: "#",
         },
       ],
     },
+  ],
+  projects: [
     {
-      title: "Community",
+      name: "Design Engineering",
       url: "#",
-      items: [
-        {
-          title: "Contribution Guide",
-          url: "#",
-        },
-      ],
+      icon: Frame,
+    },
+    {
+      name: "Sales & Marketing",
+      url: "#",
+      icon: PieChart,
+    },
+    {
+      name: "Travel",
+      url: "#",
+      icon: Map,
     },
   ],
 };
@@ -161,32 +170,28 @@ const data = {
 
 <template>
   <Sidebar v-bind="props">
+    <SidebarHeader>
+      <SidebarMenuButton size="lg" as-child>
+        <a href="#">
+          <div
+            class="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground"
+          >
+            <GalleryVerticalEnd class="size-4" />
+          </div>
+          <div class="flex flex-col gap-0.5 leading-none">
+            <span class="font-semibold">Nimba</span>
+            <span class="">v1.0.0</span>
+          </div>
+        </a>
+      </SidebarMenuButton>
+    </SidebarHeader>
     <SidebarContent>
-      <SidebarGroup>
-        <SidebarGroupLabel>Table of Contents</SidebarGroupLabel>
-        <SidebarGroupContent>
-          <SidebarMenu>
-            <SidebarMenuItem v-for="item in data.navMain" :key="item.title">
-              <SidebarMenuButton as-child>
-                <a :href="item.url" class="font-medium">
-                  {{ item.title }}
-                </a>
-              </SidebarMenuButton>
-              <SidebarMenuSub v-if="item.items.length">
-                <SidebarMenuSubItem
-                  v-for="subItem in item.items"
-                  :key="subItem.title"
-                >
-                  <SidebarMenuSubButton as-child :is-active="subItem.isActive">
-                    <a :href="subItem.url">{{ subItem.title }}</a>
-                  </SidebarMenuSubButton>
-                </SidebarMenuSubItem>
-              </SidebarMenuSub>
-            </SidebarMenuItem>
-          </SidebarMenu>
-        </SidebarGroupContent>
-      </SidebarGroup>
+      <NavMainSimple :items="data.navMain" />
+      <NavProjects :projects="data.projects" />
     </SidebarContent>
+    <SidebarFooter>
+      <NavUser :user="data.user" />
+    </SidebarFooter>
     <SidebarRail />
   </Sidebar>
 </template>

@@ -13,18 +13,11 @@
 html {
   width: 100%;
   max-width: 100%;
-  word-break: break-word;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
 }
 
 a {

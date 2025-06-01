@@ -6,7 +6,6 @@ export const containerClass = "w-full h-full";
 
 <script setup lang="ts">
 import AppSidebar from "@/components/AppSidebar.vue";
-import SidebarRight from "@/components/SidebarRight.vue";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -44,6 +43,5 @@ import {
       </header>
       <slot />
     </SidebarInset>
-    <SidebarRight />
   </SidebarProvider>
 </template>

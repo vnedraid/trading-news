@@ -6,6 +6,7 @@ import {
 
 import ChatLayout from "./layouts/ChatLayout.vue";
 import type { Component } from "vue";
+import DashboardLayout from "./layouts/DashboardLayout.vue";
 
 declare module "vue-router" {
   interface RouteMeta {
@@ -16,8 +17,19 @@ declare module "vue-router" {
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    component: () => import("@/pages/Main.vue"),
+    redirect: "/chat",
+  },
+  {
+    path: "/chat",
+    name: "chat",
+    component: () => import("@/pages/Chat.vue"),
     meta: { layout: ChatLayout },
+  },
+  {
+    path: "/dashboard",
+    name: "dashboard",
+    component: () => import("@/pages/Dashboard.vue"),
+    meta: { layout: DashboardLayout },
   },
 ];
 

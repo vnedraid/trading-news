@@ -29,6 +29,7 @@ import {
   type SidebarProps,
   SidebarRail,
 } from "@/components/ui/sidebar";
+import NavMainSimple from "./NavMainSimple.vue";
 
 const props = defineProps<SidebarProps>();
 
@@ -250,7 +251,8 @@ const data = {
         </SidebarMenuItem>
       </SidebarMenu>
       <!-- <TeamSwitcher :teams="data.teams" /> -->
-      <NavMain :items="data.navMain" />
+      <!-- <NavMain :items="data.navMain" /> -->
+      <NavMainSimple :items="data.navMain" />
     </SidebarHeader>
     <SidebarContent>
       <!-- <NavFavorites :favorites="data.favorites" />

@@ -65,7 +65,7 @@ const { isMobile } = useSidebar()
         <DropdownMenuContent
           class="w-[--reka-dropdown-menu-trigger-width] min-w-56 rounded-lg"
           :side="isMobile ? 'bottom' : 'right'"
-          align="start"
+          align="end"
           :side-offset="4"
         >
           <DropdownMenuLabel class="p-0 font-normal">
@@ -77,7 +77,7 @@ const { isMobile } = useSidebar()
                 </AvatarFallback>
               </Avatar>
               <div class="grid flex-1 text-left text-sm leading-tight">
-                <span class="truncate font-medium">{{ user.name }}</span>
+                <span class="truncate font-semibold">{{ user.name }}</span>
                 <span class="truncate text-xs">{{ user.email }}</span>
               </div>
             </div>
