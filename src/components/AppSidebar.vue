@@ -66,6 +66,7 @@ const data = {
       url: "#",
       icon: SquareTerminal,
       isActive: route.name === "chat",
+      routeName: "chat",
       items: [
         {
           title: "History",
@@ -82,10 +83,11 @@ const data = {
       ],
     },
     {
-      title: "Dashboards",
+      title: "Dashboard",
       url: "#",
       icon: LayoutDashboard,
       isActive: route.name === "dashboard",
+      routeName: "dashboard",
       items: [
         {
           title: "Genesis",

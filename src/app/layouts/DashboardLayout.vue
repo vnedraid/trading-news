@@ -34,7 +34,7 @@ import {
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbPage class="line-clamp-1">
-                  Playground
+                  Dashboard
                 </BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>

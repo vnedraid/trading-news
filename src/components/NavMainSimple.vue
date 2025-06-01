@@ -7,6 +7,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { RouterLink, type RouteRecordNameGeneric } from "vue-router";
 
 defineProps<{
   items: {
@@ -14,6 +15,7 @@ defineProps<{
     url: string;
     icon: LucideIcon;
     isActive?: boolean;
+    routeName?: RouteRecordNameGeneric;
   }[];
 }>();
 </script>
@@ -23,10 +25,10 @@ defineProps<{
     <SidebarMenu>
       <SidebarMenuItem v-for="item in items" :key="item.title">
         <SidebarMenuButton as-child :is-active="item.isActive">
-          <a :href="item.url">
+          <RouterLink :to="{ name: item.routeName }">
             <component :is="item.icon" />
             <span>{{ item.title }}</span>
-          </a>
+          </RouterLink>
         </SidebarMenuButton>
       </SidebarMenuItem>
     </SidebarMenu>
