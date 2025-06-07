@@ -7,6 +7,7 @@ import {
 import ChatLayout from "./layouts/ChatLayout.vue";
 import type { Component } from "vue";
 import DashboardLayout from "./layouts/DashboardLayout.vue";
+import HeaderLayout from "./layouts/HeaderLayout.vue";
 
 declare module "vue-router" {
   interface RouteMeta {
@@ -35,7 +36,7 @@ const routes: RouteRecordRaw[] = [
     path: "/documentation",
     name: "documentation",
     component: () => import("@/pages/News.vue"),
-    meta: { layout: DashboardLayout },
+    meta: { layout: HeaderLayout },
   },
 ];
 

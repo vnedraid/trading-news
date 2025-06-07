@@ -10,7 +10,7 @@ const layout = computed(() => route.meta.layout ?? DefaultLayout);
 
 <template>
   <div class="app-wrapper">
-    <main>
+    <main class="flex flex-col flex-auto">
       <component :is="layout">
         <RouterView />
       </component>
@@ -20,6 +20,7 @@ const layout = computed(() => route.meta.layout ?? DefaultLayout);
 
 <style>
 .app-wrapper {
+  display: flex;
   min-height: 100vh;
   width: 100%;
 }
