@@ -29,6 +29,10 @@
             {{ link.label }}
           </RouterLink>
         </nav>
+
+        <div class="flex ml-auto">
+          <SettingsDialog />
+        </div>
       </div>
     </div>
   </header>
@@ -36,7 +40,9 @@
 </template>
 
 <script setup>
-import { GalleryVerticalEnd, Icon, Link } from "lucide-vue-next";
+import SettingsDialog from "@/components/SettingsDialog.vue";
+import { Button } from "@/components/ui/button";
+import { GalleryVerticalEnd, Icon, Link, SettingsIcon } from "lucide-vue-next";
 import { useRoute } from "vue-router";
 
 const route = useRoute();

@@ -4,10 +4,9 @@ import {
   type RouteRecordRaw,
 } from "vue-router";
 
-import ChatLayout from "./layouts/ChatLayout.vue";
 import type { Component } from "vue";
-import DashboardLayout from "./layouts/DashboardLayout.vue";
-import HeaderLayout from "./layouts/HeaderLayout.vue";
+import HomeLayout from "./layouts/HomeLayout.vue";
+import NewsLayout from "./layouts/NewsLayout.vue";
 
 declare module "vue-router" {
   interface RouteMeta {
@@ -18,25 +17,19 @@ declare module "vue-router" {
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    redirect: "/chat",
+    redirect: "/home",
   },
   {
-    path: "/chat",
-    name: "chat",
-    component: () => import("@/pages/Chat.vue"),
-    meta: { layout: ChatLayout },
+    path: "/home",
+    name: "home",
+    component: () => import("@/pages/Home.vue"),
+    meta: { layout: HomeLayout },
   },
   {
-    path: "/dashboard",
-    name: "dashboard",
-    component: () => import("@/pages/Dashboard.vue"),
-    meta: { layout: DashboardLayout },
-  },
-  {
-    path: "/documentation",
-    name: "documentation",
+    path: "/news",
+    name: "news",
     component: () => import("@/pages/News.vue"),
-    meta: { layout: HeaderLayout },
+    meta: { layout: NewsLayout },
   },
 ];
 
