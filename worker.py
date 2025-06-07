@@ -1,6 +1,6 @@
 import asyncio
 
-from activities import translate_phrase
+from activities import run_agent
 from temporalio.client import Client
 from temporalio.worker import Worker
 from workflow import LangChainWorkflow
@@ -14,7 +14,7 @@ async def main():
         client,
         task_queue="langchain-task-queue",
         workflows=[LangChainWorkflow],
-        activities=[translate_phrase],
+        activities=[run_agent],
     )
 
     print("\nWorker started, ctrl+c to exit\n")

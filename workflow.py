@@ -3,15 +3,15 @@ from datetime import timedelta
 from temporalio import workflow
 
 with workflow.unsafe.imports_passed_through():
-    from activities import TranslateParams, translate_phrase
+    from activities import AgentParams, run_agent
 
 
 @workflow.defn
 class LangChainWorkflow:
     @workflow.run
-    async def run(self, params: TranslateParams) -> dict:
+    async def run(self, params: AgentParams) -> dict:
         return await workflow.execute_activity(
-            translate_phrase,
+            run_agent,
             params,
-            schedule_to_close_timeout=timedelta(seconds=30),
+            schedule_to_close_timeout=timedelta(seconds=180),
         )
