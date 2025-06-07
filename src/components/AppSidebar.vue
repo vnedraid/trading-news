@@ -4,7 +4,6 @@ import type { SidebarProps } from "@/components/ui/sidebar";
 import {
   AudioWaveform,
   BookOpen,
-  Bot,
   Command,
   Frame,
   GalleryVerticalEnd,
@@ -14,10 +13,8 @@ import {
   SquareTerminal,
   LayoutDashboard,
 } from "lucide-vue-next";
-import NavMain from "@/components/NavMain.vue";
 import NavProjects from "@/components/NavProjects.vue";
 import NavUser from "@/components/NavUser.vue";
-import TeamSwitcher from "@/components/TeamSwitcher.vue";
 
 import {
   Sidebar,
@@ -107,6 +104,7 @@ const data = {
       title: "Documentation",
       url: "#",
       icon: BookOpen,
+      routeName: "documentation",
       items: [
         {
           title: "Introduction",

@@ -14,11 +14,7 @@ import {
   Trash2,
 } from "lucide-vue-next";
 
-import NavFavorites from "@/components/NavFavorites.vue";
-import NavMain from "@/components/NavMain.vue";
 import NavSecondary from "@/components/NavSecondary.vue";
-import NavWorkspaces from "@/components/NavWorkspaces.vue";
-import TeamSwitcher from "@/components/TeamSwitcher.vue";
 import {
   Sidebar,
   SidebarContent,

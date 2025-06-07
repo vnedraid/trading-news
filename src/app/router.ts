@@ -31,6 +31,12 @@ const routes: RouteRecordRaw[] = [
     component: () => import("@/pages/Dashboard.vue"),
     meta: { layout: DashboardLayout },
   },
+  {
+    path: "/documentation",
+    name: "documentation",
+    component: () => import("@/pages/News.vue"),
+    meta: { layout: DashboardLayout },
+  },
 ];
 
 export const router = createRouter({

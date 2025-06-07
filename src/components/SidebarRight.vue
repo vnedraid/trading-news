@@ -1,54 +1,38 @@
 <script setup lang="ts">
-import { Plus } from 'lucide-vue-next'
-
-import Calendars from '@/components/Calendars.vue'
-import DatePicker from '@/components/DatePicker.vue'
-import NavUser from '@/components/NavUser.vue'
+import Calendars from "@/components/Calendars.vue";
+import DatePicker from "@/components/DatePicker.vue";
+import NavUser from "@/components/NavUser.vue";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
   type SidebarProps,
   SidebarSeparator,
-} from '@/components/ui/sidebar'
+} from "@/components/ui/sidebar";
 
 const props = withDefaults(defineProps<SidebarProps>(), {
-  collapsible: 'none',
-})
+  collapsible: "none",
+});
 
 // This is sample data.
 const data = {
   user: {
-    name: 'shadcn',
-    email: 'm@example.com',
-    avatar: '/avatars/shadcn.jpg',
+    name: "shadcn",
+    email: "m@example.com",
+    avatar: "/avatars/shadcn.jpg",
   },
   calendars: [
     {
-      name: 'My Calendars',
-      items: ['Personal', 'Work', 'Family'],
-    },
-    {
-      name: 'Favorites',
-      items: ['Holidays', 'Birthdays'],
-    },
-    {
-      name: 'Other',
-      items: ['Travel', 'Reminders', 'Deadlines'],
+      name: "Recently viewed",
+      items: ["Travel", "Reminders", "Deadlines"],
     },
   ],
-}
+};
 </script>
 
 <template>
-  <Sidebar
-    class="sticky hidden lg:flex top-0 h-svh border-l"
-    v-bind="props"
-  >
+  <Sidebar class="sticky hidden lg:flex top-0 h-svh border-l" v-bind="props">
     <SidebarHeader class="h-16 border-b border-sidebar-border">
       <NavUser :user="data.user" />
     </SidebarHeader>
@@ -57,15 +41,6 @@ const data = {
       <SidebarSeparator class="mx-0" />
       <Calendars :calendars="data.calendars" />
     </SidebarContent>
-    <SidebarFooter>
-      <SidebarMenu>
-        <SidebarMenuItem>
-          <SidebarMenuButton>
-            <Plus />
-            <span>New Calendar</span>
-          </SidebarMenuButton>
-        </SidebarMenuItem>
-      </SidebarMenu>
-    </SidebarFooter>
+    <SidebarFooter> </SidebarFooter>
   </Sidebar>
 </template>

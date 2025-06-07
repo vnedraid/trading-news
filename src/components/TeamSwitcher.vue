@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ChevronsUpDown, Plus } from 'lucide-vue-next'
+import { ChevronsUpDown, Plus } from "lucide-vue-next";
 
-import { type Component, ref } from 'vue'
+import { type Component, ref } from "vue";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,25 +10,25 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
+} from "@/components/ui/dropdown-menu";
 
 import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from '@/components/ui/sidebar'
+} from "@/components/ui/sidebar";
 
 const props = defineProps<{
   teams: {
-    name: string
-    logo: Component
-    plan: string
-  }[]
-}>()
+    name: string;
+    logo: Component;
+    plan: string;
+  }[];
+}>();
 
-const { isMobile } = useSidebar()
-const activeTeam = ref(props.teams[0])
+const { isMobile } = useSidebar();
+const activeTeam = ref(props.teams[0]);
 </script>
 
 <template>
@@ -37,10 +37,13 @@ const activeTeam = ref(props.teams[0])
       <DropdownMenu>
         <DropdownMenuTrigger as-child>
           <SidebarMenuButton
+            as="button"
             size="lg"
             class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
           >
-            <div class="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+            <div
+              class="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground"
+            >
               <component :is="activeTeam.logo" class="size-4" />
             </div>
             <div class="grid flex-1 text-left text-sm leading-tight">
@@ -67,7 +70,9 @@ const activeTeam = ref(props.teams[0])
             class="gap-2 p-2"
             @click="activeTeam = team"
           >
-            <div class="flex size-6 items-center justify-center rounded-sm border">
+            <div
+              class="flex size-6 items-center justify-center rounded-sm border"
+            >
               <component :is="team.logo" class="size-3.5 shrink-0" />
             </div>
             {{ team.name }}
@@ -75,12 +80,12 @@ const activeTeam = ref(props.teams[0])
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem class="gap-2 p-2">
-            <div class="flex size-6 items-center justify-center rounded-md border bg-transparent">
+            <div
+              class="flex size-6 items-center justify-center rounded-md border bg-transparent"
+            >
               <Plus class="size-4" />
             </div>
-            <div class="font-medium text-muted-foreground">
-              Add team
-            </div>
+            <div class="font-medium text-muted-foreground">Add team</div>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

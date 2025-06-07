@@ -1,19 +1,48 @@
 <template>
   <div class="flex flex-1 flex-col gap-4 p-4">
-    <div class="chart-container">
-      <LWChart
-        :type="chartType"
-        :data="data"
-        autosize
-        :chart-options="chartOptions"
-        :series-options="seriesOptions"
-        ref="lwChart"
-      />
-    </div>
-    <div class="flex gap-2">
-      <Button type="button" @click="changeColors">Set Random Colors</Button>
-      <Button type="button" @click="changeType">Change Chart Type</Button>
-      <Button type="button" @click="changeData">Change Data</Button>
+    <div class="chart-container h-full">
+      <div class="grid grid-cols-4 grid-rows-7 gap-4 h-full">
+        <Card class="col-span-4 row-span-3 col-start-1 row-start-2">
+          <CardHeader>
+            <CardTitle> Total Visitors </CardTitle>
+            <CardDescription>
+              <span className="hidden @[540px]/card:block">
+                Total for the last 3 months
+              </span>
+              <span className="@[540px]/card:hidden">Last 3 months</span>
+            </CardDescription>
+          </CardHeader>
+          <CardContent class="h-full">
+            <LWChart
+              :type="chartType"
+              :data="data"
+              autosize
+              :chart-options="chartOptions"
+              :series-options="seriesOptions"
+              ref="lwChart"
+              class="h-auto"
+            />
+          </CardContent>
+          <CardContent>
+            <CardAction class="flex gap-2">
+              <Button type="button" @click="changeColors">
+                Set Random Colors
+              </Button>
+              <Button type="button" @click="changeType">
+                Change Chart Type
+              </Button>
+              <Button type="button" @click="changeData">Change Data</Button>
+            </CardAction>
+          </CardContent>
+        </Card>
+        <Card class="col-span-2 row-span-2 col-start-1 row-start-5">3</Card>
+        <Card class="col-span-2 row-span-2 col-start-3 row-start-5">4</Card>
+        <Card class="col-start-1 row-start-1">5</Card>
+        <Card class="col-start-2 row-start-1">6</Card>
+        <Card class="col-start-3 row-start-1">7</Card>
+        <Card class="col-start-4 row-start-1">8</Card>
+        <Card class="col-span-4 row-span-2 row-start-7">9</Card>
+      </div>
     </div>
   </div>
 </template>
@@ -25,8 +54,17 @@
 
 <script setup>
 import { ref } from "vue";
-import LWChart from "@/components/LWChart.vue";
+import LWChar from "@/components/LWChart.vue";
 import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import LWChart from "@/components/LWChart.vue";
 
 /**
  * Generates sample data for the Lightweight Charts™ example
