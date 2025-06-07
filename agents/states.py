@@ -1,8 +1,7 @@
 from typing import Annotated, List
-from langgraph.graph.message import add_messages
 from typing_extensions import TypedDict
 from langchain_core.messages import BaseMessage
-from typing_extensions import Annotated, TypedDict
+from typing_extensions import Annotated
 from langchain_core.documents import Document
 
 
@@ -16,8 +15,10 @@ def manage_list(existing: list, updates: list | dict):
         # and clear the entire list.
         return existing[updates["from"] : updates["to"]]
 
+
 class State(TypedDict):
     messages: Annotated[list, manage_list]
     structure_output: dict | None = None
     documents: List[Document] | None = None
     answer: BaseMessage | str | None = None
+    remaining_steps: int | None = None

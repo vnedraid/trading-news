@@ -4,6 +4,7 @@ from activities import run_agent
 from temporalio.client import Client
 from temporalio.worker import Worker
 from workflow import LangChainWorkflow
+from concurrent.futures import ProcessPoolExecutor
 
 interrupt_event = asyncio.Event()
 
@@ -15,6 +16,7 @@ async def main():
         task_queue="langchain-task-queue",
         workflows=[LangChainWorkflow],
         activities=[run_agent],
+        activity_executor=ProcessPoolExecutor(max_workers=3),
     )
 
     print("\nWorker started, ctrl+c to exit\n")

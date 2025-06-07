@@ -15,3 +15,16 @@ class LangChainWorkflow:
             params,
             schedule_to_close_timeout=timedelta(seconds=180),
         )
+
+
+@workflow.defn
+class LoaderWorkFlow:
+    @workflow.run
+    async def run(self, params: AgentParams) -> dict:
+        ...
+
+        # agent_answer = await workflow.execute_child_workflow(
+        #     LangChainWorkflow.run,
+        #     AgentParams("Hello", name),
+        #     id="child-workflow-workflow-child-id",
+        # )

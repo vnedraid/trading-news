@@ -7,7 +7,6 @@ import uvicorn
 
 from activities import AgentParams
 
-import os
 
 load_dotenv()
 
@@ -21,6 +20,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+
 
 @app.post("/run_agent")
 async def run_agent(payload: dict, agent: str):
@@ -36,6 +36,7 @@ async def run_agent(payload: dict, agent: str):
         raise HTTPException(status_code=500, detail=str(e))
 
     return result
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host="localhost", port=8008)

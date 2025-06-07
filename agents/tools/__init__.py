@@ -3,7 +3,7 @@ from .reduce_documents import reduce_documents
 from .retrive_documents import retrive_documents
 from .store_documents import store_documents
 
-TOOLS =  {
+TOOLS = {
     "load_content": load_content,
     "reduce_documents": reduce_documents,
     "retrive_documents": retrive_documents,
@@ -11,7 +11,5 @@ TOOLS =  {
 }
 
 
-def get_tools(names: list)-> list:
+def get_tools(names: list) -> list:
     return [TOOLS[tool] for tool in TOOLS if tool in names]
-
-

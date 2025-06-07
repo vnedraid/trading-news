@@ -1,15 +1,17 @@
 from langfuse import Langfuse
-from langfuse.langchain import CallbackHandler
-import os
+from langchain_core.callbacks import BaseCallbackHandler
 
-LANGFUSE_URL = os.environ["LANGFUSE_URL"]
-LANGFUSE_PK = os.environ["LANGFUSE_PK"]
-LANGFUSE_SK = os.environ["LANGFUSE_SK"]
 
-langfuse = Langfuse(
-    secret_key=LANGFUSE_SK,
-    public_key=LANGFUSE_PK,
-    host=LANGFUSE_URL,
+class LangfuseCallbackHandler(BaseCallbackHandler):
+    def __init__(self, langfuse_client):
+        self.langfuse = langfuse_client
+        self.run_inline = True  # or False depending on your needs
+
+
+langfuse_client = Langfuse(
+    secret_key="sk-lf-ad4f7aa9-b61e-45cb-b1a3-c3797d9fbd3b",
+    public_key="pk-lf-6cd8b044-cf96-486d-8f8d-7728466de368",
+    host="https://cloud.langfuse.com",
 )
 
-langfuse_handler = CallbackHandler()
+langfuse_handler = LangfuseCallbackHandler(langfuse_client)
