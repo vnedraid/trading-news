@@ -1,0 +1,1 @@
+"""Test suite for the News Feeder Service."""
