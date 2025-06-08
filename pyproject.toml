@@ -1,0 +1,26 @@
+[project]
+name = "trading-news"
+version = "0.1.0"
+description = "Traiding News bot"
+authors = [
+    {name = "Artyom Belov", email = "mr.belov.as@ya.ru"},
+]
+dependencies = [
+    "langgraph>=0.4.8", 
+    "temporalio>=1.11.1", 
+    "fastapi>=0.115.12", 
+    "aiogram>=3.20.0.post0", 
+    "uvicorn>=0.34.2", 
+    "python-dotenv>=1.1.0", 
+    "langchain-gigachat>=0.3.10", 
+    "langfuse>=3.0.0", 
+    "langchain-text-splitters>=0.3.8", 
+    "langchain-experimental>=0.3.4", 
+    "langchain-postgres>=0.0.14", 
+    "langchain-unstructured>=0.1.6", 
+    "langchain>=0.3.25", 
+    "langgraph-supervisor>=0.0.27"
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "Other"}
