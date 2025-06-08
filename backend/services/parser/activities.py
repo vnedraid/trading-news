@@ -80,7 +80,7 @@ async def check_feed_for_updates(feed_url: str, last_processed_guid: str = None)
 
     except Exception as e:
         activity.logger.error(f"Ошибка при обработке {feed_url}: {str(e)}")
-        raise
+        return
 
 
 @activity.defn
