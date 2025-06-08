@@ -44,7 +44,7 @@ export const useSummaryStore = defineStore("summary", () => {
   async function getSumaryBySettings(
     settings: Settings = { sectors: [], tickers: [], style: "temperate" }
   ) {
-    const query = { agent: "news_analyzer_json" };
+    const query = { agent: "test_news_analyzer_retriver" };
 
     const data = {
       messages: [
@@ -61,7 +61,7 @@ export const useSummaryStore = defineStore("summary", () => {
 
     try {
       const res = await instance.post(
-        `${import.meta.env.VITE_API_URL}/run_agent`,
+        `${import.meta.env.VITE_API_URL}/run_agent_retriver`,
         data,
         { params: query }
       );
