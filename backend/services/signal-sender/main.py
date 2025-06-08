@@ -31,7 +31,7 @@ async def main():
             
             # Отправляем сигнал в workflow
             try:
-                await client.get_workflow_handle("news-feed-wrokflow").signal(
+                await client.get_workflow_handle("news-feed-workflow").signal(
                     "news-feed-signal",
                     signal_data
                 )

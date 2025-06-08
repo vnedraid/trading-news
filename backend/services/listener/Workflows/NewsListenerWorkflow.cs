@@ -1,6 +1,7 @@
 using Temporalio.Workflows;
 using listener.Models;
 using System.Text.Json;
+using System.Collections.Concurrent;
 
 namespace listener.Workflows;
 
@@ -8,6 +9,7 @@ namespace listener.Workflows;
 public class NewsListenerWorkflow
 {
     private readonly List<SignalData> _receivedSignals = new();
+    private static readonly ConcurrentQueue<SignalData> _newsQueue = new();
 
     public NewsListenerWorkflow()
     {
@@ -43,7 +45,9 @@ public class NewsListenerWorkflow
         Workflow.Logger.LogInformation("   📊 Всего получено сигналов: {Count}", _receivedSignals.Count);
         Workflow.Logger.LogInformation(new string('-', 80));
 
-        
+        // Add to processing queue for background service
+        _newsQueue.Enqueue(signalData);
+        Workflow.Logger.LogInformation("🚀 Новость добавлена в очередь для анализа через LLM");
 
         await Task.CompletedTask;
     }
@@ -63,6 +67,12 @@ public class NewsListenerWorkflow
     public int GetSignalsCount() => _receivedSignals.Count;
 
     [WorkflowQuery("get_latest_signals")]
-    public List<SignalData> GetLatestSignals(int count = 10) 
+    public List<SignalData> GetLatestSignals(int count = 10)
         => _receivedSignals.TakeLast(count).ToList();
+
+    // Static method to get news from queue for background processing
+    public static bool TryDequeueNews(out SignalData? newsData)
+    {
+        return _newsQueue.TryDequeue(out newsData);
+    }
 }

@@ -27,3 +27,8 @@ dependencies = [
     "langchain-chroma>=0.2.2",
     "langchain-openai>=0.3.21",
 ]
+
+[tool.uv.workspace]
+members = [
+    "backend/services/parser",
+]

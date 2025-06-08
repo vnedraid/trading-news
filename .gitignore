@@ -186,3 +186,5 @@ bin
 obj
 
 .vscode
+
+appsettings.secrets.json
