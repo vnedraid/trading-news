@@ -6,11 +6,8 @@ from .states import *
 from .models import llm
 
 
-
 with open("agents/configs.yaml", "r", encoding='utf-8') as f:
     configs = yaml.safe_load(f)
-
-
 
 AGENTS = {}
 for name in configs.keys():

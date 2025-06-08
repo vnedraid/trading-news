@@ -22,3 +22,5 @@ class State(TypedDict):
     documents: List[Document] | None = None
     answer: BaseMessage | str | None = None
     remaining_steps: int | None = None
+    page_content: str | None = None
+    metadata: dict | None = {}

@@ -3,7 +3,7 @@ import asyncio
 from activities import run_agent
 from temporalio.client import Client
 from temporalio.worker import Worker
-from workflow import LangChainWorkflow
+from workflow import LangChainWorkflow, LoaderWorkFlow
 from concurrent.futures import ProcessPoolExecutor
 
 interrupt_event = asyncio.Event()
@@ -14,7 +14,7 @@ async def main():
     worker = Worker(
         client,
         task_queue="langchain-task-queue",
-        workflows=[LangChainWorkflow],
+        workflows=[LangChainWorkflow, LoaderWorkFlow],
         activities=[run_agent],
         activity_executor=ProcessPoolExecutor(max_workers=3),
     )

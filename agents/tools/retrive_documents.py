@@ -14,4 +14,4 @@ def retrive_documents(
     if bool(documents):
         return {"documents": documents}
     else:
-        return "No documents found. Use Load Content Tool next if you have URL of document!"
+       return {"documents": []}

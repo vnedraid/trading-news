@@ -12,7 +12,7 @@ sdk = YCloudML(
 # llm = sdk.models.completions("yandexgpt", model_version="rc").langchain()
 llm = GigaChat(
     credentials=os.getenv("GIGA_KEY"),
-    model="GigaChat-2-Pro",  # GigaChat-2-Pro
+    model="GigaChat-2-Max",  # GigaChat-2-Pro
     verify_ssl_certs=False,
     streaming=False,
 )

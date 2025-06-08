@@ -1,4 +1,5 @@
 from datetime import timedelta
+from uuid import uuid4
 
 from temporalio import workflow
 
@@ -21,10 +22,16 @@ class LangChainWorkflow:
 class LoaderWorkFlow:
     @workflow.run
     async def run(self, params: AgentParams) -> dict:
-        ...
-
-        # agent_answer = await workflow.execute_child_workflow(
-        #     LangChainWorkflow.run,
-        #     AgentParams("Hello", name),
-        #     id="child-workflow-workflow-child-id",
-        # )
+        agent_answer = await workflow.execute_child_workflow(
+            LangChainWorkflow.run,
+            params,
+            id=f"child-summary-{uuid4}",
+        )
+        page_content = agent_answer.get('messages')[-1].get('content')
+        store_params = {'agent': 'store_document', 'payload': {'page_content': page_content}}
+        await workflow.execute_child_workflow(
+            LangChainWorkflow.run,
+            AgentParams(**store_params),
+            id=f"child-summary-store-{uuid4}",
+        )
+        return agent_answer.get('messages')[-1]

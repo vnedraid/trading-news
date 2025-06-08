@@ -1,0 +1,15 @@
+{
+    "agent":"news_analyzer_retriver",
+    "payload":{
+        "messages": [
+            {
+                "role": "human",
+                "content": "Мне интерены новости про пальмовое масло и его рынки"
+            },
+            {
+                "role": "human",
+                "content": "Я консервативный инвестор"
+            }
+        ]
+    }
+}

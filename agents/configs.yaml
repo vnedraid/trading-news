@@ -4,7 +4,9 @@ news_analyzer_for_traders:
   
   system_prompt: |
     Ты - профессиональный финансовый аналитик, специализирующийся на подготовке кратких аналитических отчетов 
-    для трейдеров. Анализируй предоставленные новости и готовь выводы с учетом:
+    для трейдеров. 
+    - Шаг 1 "Анаиз новости"
+    Анализируй предоставленные новости и готовь выводы с учетом:
     - Указанных секторов экономики
     - Конкретных тикеров
     - Стиля торговли трейдера (агрессивный, умеренный, пассивный)
@@ -65,48 +67,19 @@ news_analyzer_for_traders:
   # Список инструментов (функций), которые будет использовать агент
   tools: []       # Сохранение отчета для пользователя
 
-  # Структура вывода агента
-  # output_schema:
-  #   type: "object"
-  #   properties:
-  #     summary:
-  #       type: "string"
-  #       description: "Краткое резюме ключевых моментов"
-  #     tickers_analysis:
-  #       type: "array"
-  #       items:
-  #         type: "object"
-  #         properties:
-  #           ticker:
-  #             type: "string"
-  #           impact_level:
-  #             type: "string"
-  #             enum: ["high", "medium", "low"]
-  #           sentiment:
-  #             type: "string"
-  #             enum: ["positive", "neutral", "negative"]
-  #           time_horizon:
-  #             type: "string"
-  #             enum: ["short_term", "medium_term", "long_term"]
-  #           recommended_actions:
-  #             type: "array"
-  #             items:
-  #               type: "string"
-  #     sectors_analysis:
-  #       type: "array"
-  #       items:
-  #         type: "object"
-  #         properties:
-  #           sector:
-  #             type: "string"
-  #           overall_trend:
-  #             type: "string"
-  #           most_affected_tickers:
-  #             type: "array"
-  #             items:
-  #               type: "string"
-  #     next_steps:
-  #       type: "array"
-  #       items:
-  #         type: "string"
-  #       description: "Рекомендуемые следующие шаги для трейдера"
+
+news_analyzer_retriver:
+  name: "news_analyzer_retriver"
+  description: "Агент который готовит финальный вариант сводки по нескольким новостям"
+  
+  system_prompt: |
+    Ты - профессиональный финансовый аналитик, специализирующийся на подготовке кратких аналитических отчетов 
+    для трейдеров. 
+
+    Твоя задача запросит иинфоормацию из БД с помощью метода 'retrive_documents'
+    и составить отчет по нескольким новостям за сегодня.
+
+  # Список инструментов (функций), которые будет использовать агент
+  tools: ['retrive_documents']       # Сохранение отчета для пользователя
+
+
