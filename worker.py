@@ -5,12 +5,13 @@ from temporalio.client import Client
 from temporalio.worker import Worker
 from workflow import LangChainWorkflow, LoaderWorkFlow
 from concurrent.futures import ProcessPoolExecutor
+import os
 
 interrupt_event = asyncio.Event()
 
 
 async def main():
-    client = await Client.connect("localhost:7233")
+    client = await Client.connect(os.getenv("TEMPORAL_HOST", "localhost:7233"))
     worker = Worker(
         client,
         task_queue="langchain-task-queue",

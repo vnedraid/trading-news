@@ -1,8 +1,4 @@
-
-
-
 PROMPTS = {
-    
     "summary": [
         (
             "human",
@@ -14,17 +10,16 @@ PROMPTS = {
             "human",
             "Твоя задача выаолинть следующие действия"
             "1. Запросить информацию из Базы данных для ответа на вопрос : {question}"
-            "2. Удалить дублирующую информацию из полученной информации и составить саммари"
+            "2. Удалить дублирующую информацию из полученной информации и составить саммари",
         ),
-    ]
-    
+    ],
 }
 
 from langchain_core.messages import BaseMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from pydantic import BaseModel, create_model
 import json
-import typing as t 
+import typing as t
 
 
 @t.runtime_checkable

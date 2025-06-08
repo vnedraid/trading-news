@@ -6,7 +6,7 @@ from .states import *
 from .models import llm
 
 
-with open("agents/configs.yaml", "r", encoding='utf-8') as f:
+with open("agents/configs.yaml", "r", encoding="utf-8") as f:
     configs = yaml.safe_load(f)
 
 AGENTS = {}
@@ -15,10 +15,8 @@ for name in configs.keys():
         model=llm,
         name=configs[name]["name"],
         prompt=configs[name]["system_prompt"],
-        tools=get_tools(
-            configs[name]["tools"]
-        ),
-        response_format=configs[name].get("output_schema")
+        tools=get_tools(configs[name]["tools"]),
+        response_format=configs[name].get("output_schema"),
     )
     AGENTS.update({name: agent})
 

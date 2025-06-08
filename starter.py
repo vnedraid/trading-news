@@ -4,27 +4,35 @@ from fastapi import FastAPI, HTTPException
 from temporalio.client import Client
 from dotenv import load_dotenv
 import uvicorn
+import os 
 
 from activities import AgentParams
+from workflow import LangChainWorkflow, LoaderWorkFlow  # Объединены импорты
 
-
+# Загрузка переменных окружения должна быть в начале
 load_dotenv()
-
-from workflow import LangChainWorkflow
-from workflow import LoaderWorkFlow
-
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app.state.temporal_client = await Client.connect("localhost:7233")
-    yield
-
+    # Используем переменную окружения для адреса Temporal
+    temporal_host = os.getenv("TEMPORAL_HOST", "localhost:7233")
+    try:
+        app.state.temporal_client = await Client.connect(temporal_host)
+        yield
+    except Exception as e:
+        raise RuntimeError(f"Failed to connect to Temporal: {str(e)}")
+    finally:
+        # Закрываем соединение при завершении
+        if hasattr(app.state, 'temporal_client'):
+            await app.state.temporal_client.close()
 
 app = FastAPI(lifespan=lifespan)
 
-
 @app.post("/run_agent")
 async def run_agent(payload: dict, agent: str):
+    if not hasattr(app.state, 'temporal_client'):
+        raise HTTPException(status_code=500, detail="Temporal client not initialized")
+    
     client = app.state.temporal_client
     try:
         result = await client.execute_workflow(
@@ -33,13 +41,15 @@ async def run_agent(payload: dict, agent: str):
             id=f"langchain-{agent}-{uuid4()}",
             task_queue="langchain-task-queue",
         )
+        return {"status": "success", "result": result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-    return result
-
 @app.post("/store_agent")
-async def run_agent(payload: dict, agent: str):
+async def store_agent(payload: dict, agent: str):  # Исправлено имя функции (было run_agent)
+    if not hasattr(app.state, 'temporal_client'):
+        raise HTTPException(status_code=500, detail="Temporal client not initialized")
+    
     client = app.state.temporal_client
     try:
         result = await client.execute_workflow(
@@ -48,11 +58,11 @@ async def run_agent(payload: dict, agent: str):
             id=f"langchain-loader-{uuid4()}",
             task_queue="langchain-task-queue",
         )
+        return {"status": "success", "result": result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-    return result
-
-
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8008)
+    # Порт берем из переменных окружения
+    port = int(os.getenv("APP_PORT", 7777))
+    uvicorn.run(app, host="0.0.0.0", port=port)

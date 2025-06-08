@@ -14,4 +14,4 @@ def retrive_documents(
     if bool(documents):
         return {"documents": documents}
     else:
-       return {"documents": []}
+        return {"documents": []}

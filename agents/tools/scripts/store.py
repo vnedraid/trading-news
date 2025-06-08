@@ -1,10 +1,9 @@
-
-import os
 from langchain_core.vectorstores import VectorStore
 from langchain_chroma import Chroma
 
 
 from ...models import embeddings
+
 
 def get_vectorstore() -> VectorStore:
     # """Создание векторного хранилища"""

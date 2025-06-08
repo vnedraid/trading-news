@@ -7,9 +7,9 @@ from .scripts.store import get_vectorstore
 
 
 @tool
-def store_document(page_content: str, metadata: dict|None = {}) -> Command:
+def store_document(page_content: str, metadata: dict | None = {}) -> Command:
     "Store Documents from AgentState to VectorStore"
-    
+
     match metadata:
         case n if isinstance(n, str):
             try:
