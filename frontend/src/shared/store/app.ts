@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
-import { computed, ref } from "vue";
-import { instance } from "../api";
+import { ref } from "vue";
 import db from "../../../db.json";
+import { instance } from "../api";
 
 export interface Root {
   body: Summary[];
@@ -44,12 +44,35 @@ export const useSummaryStore = defineStore("summary", () => {
   async function getSumaryBySettings(
     settings: Settings = { sectors: [], tickers: [], style: "temperate" }
   ) {
-    console.log(settings);
-    const res = await instance.get("settings");
-    console.log(res);
-    summary.value.body = db.summary.body;
-    summary.value.sources = [...db.summary.sources].splice(0, 3);
-    summary.value.shortNews = db.summary.shortNews;
+    const query = { agent: "news_analyzer_json" };
+
+    const data = {
+      messages: [
+        {
+          role: "content",
+          content: `Я ${
+            settings.style
+          } инвестор, меня интересуют тикеры - ${settings.tickers.join(
+            ","
+          )} и следующие сектора эконимики ${settings.sectors.join(",")}`,
+        },
+      ],
+    };
+
+    try {
+      const res = await instance.post(
+        `${import.meta.env.VITE_API_URL}/run_agent`,
+        data,
+        { params: query }
+      );
+      summary.value.body = res.data.summary.body;
+      summary.value.sources = [...res.data.summary.sources].splice(0, 3);
+      summary.value.shortNews = res.data.summary.shortNews;
+    } catch {
+      summary.value.body = db.summary.body;
+      summary.value.sources = [...db.summary.sources].splice(0, 3);
+      summary.value.shortNews = db.summary.shortNews;
+    }
   }
 
   return { summary, getSumaryBySettings };

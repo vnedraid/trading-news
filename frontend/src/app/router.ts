@@ -6,7 +6,6 @@ import {
 
 import type { Component } from "vue";
 import HomeLayout from "./layouts/HomeLayout.vue";
-import NewsLayout from "./layouts/NewsLayout.vue";
 
 declare module "vue-router" {
   interface RouteMeta {
@@ -17,11 +16,7 @@ declare module "vue-router" {
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    redirect: "/home",
-  },
-  {
-    path: "/home",
-    name: "home",
+    name: "main",
     component: () => import("@/pages/Summary.vue"),
     meta: { layout: HomeLayout },
   },

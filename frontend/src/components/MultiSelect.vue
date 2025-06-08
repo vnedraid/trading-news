@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useFilter } from "reka-ui";
-import { computed, ref, watch, type PropType } from "vue";
+import { computed, ref, type PropType } from "vue";
 import {
   Combobox,
   ComboboxAnchor,

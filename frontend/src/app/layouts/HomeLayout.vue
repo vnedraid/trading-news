@@ -19,7 +19,7 @@
         </div>
 
         <!-- Navigation Links -->
-        <nav class="items-center gap-0.5 hidden lg:flex">
+        <!-- <nav class="items-center gap-0.5 hidden lg:flex">
           <RouterLink
             v-for="(link, index) in navLinks"
             :key="index"
@@ -28,7 +28,7 @@
           >
             {{ link.label }}
           </RouterLink>
-        </nav>
+        </nav> -->
 
         <div class="flex ml-auto">
           <SettingsDialog />
@@ -41,15 +41,7 @@
 
 <script setup>
 import SettingsDialog from "@/components/SettingsDialog.vue";
-import { GalleryVerticalEnd, Icon, Link, SettingsIcon } from "lucide-vue-next";
-import { useRoute } from "vue-router";
-
-const route = useRoute();
-
-// Normalize paths to compare them reliably
-const isActive = (href) => {
-  return route.path.replace(/\/+$/, "") === href.replace(/\/+$/, "");
-};
+import { GalleryVerticalEnd } from "lucide-vue-next";
 
 const navLinks = [
   { label: "Home", href: "/" },

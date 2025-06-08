@@ -4,7 +4,7 @@
       <!-- Main Content Container -->
       <Card class="lg:col-span-3 gap-4">
         <CardHeader>
-          <CardTitle class="text-4xl"> Today Summary </CardTitle>
+          <CardTitle class="text-4xl"> Сводка </CardTitle>
         </CardHeader>
         <CardContent class="space-y-6 h-full flex flex-col">
           <!-- Large Content Area -->
@@ -91,7 +91,7 @@
           <!-- Three Bottom Content Areas -->
           <Card class="bg-gray-50 gap-4" v-if="summary.sources.length > 0">
             <CardHeader>
-              <CardTitle>Sources</CardTitle>
+              <CardTitle>Источники</CardTitle>
             </CardHeader>
             <CardContent class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Card
@@ -120,7 +120,7 @@
       <!-- News Feed Sidebar -->
       <Card class="lg:col-span-1 min-h-[500px]">
         <CardContent class="h-full overflow-hidden">
-          <h2 class="text-lg font-semibold text-gray-800 mb-4">News</h2>
+          <h2 class="text-lg font-semibold text-gray-800 mb-4">Новости</h2>
           <div class="space-y-3 relative h-full overflow-auto">
             <div class="flex flex-col gap-4 absolute w-full">
               <Card
