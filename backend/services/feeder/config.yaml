@@ -1,0 +1,120 @@
+# News Feeder Service Configuration
+
+# Service configuration
+service:
+  name: "news-feeder"
+  check_interval_minutes: 10
+  max_concurrent_sources: 10
+  shutdown_timeout_seconds: 30
+
+# Redis configuration for duplicate detection
+redis:
+  host: "localhost"
+  port: 6379
+  db: 0
+  password: null
+  ssl: false
+  socket_timeout: 30
+  socket_connect_timeout: 30
+  max_connections: 10
+
+# Temporal workflow configuration
+temporal:
+  host: "localhost"
+  port: 7233
+  namespace: "default"
+  task_queue: "news-processing"
+  workflow_timeout_seconds: 300
+  activity_timeout_seconds: 60
+
+# Webhook configuration (for receiving events)
+webhook:
+  base_port: 9000
+  port_range: 100
+  auto_assign: true
+  health_check_path: "/health"
+  max_retries: 10
+
+# Monitoring configuration
+monitoring:
+  health_check_port: 8090
+  metrics_enabled: true
+  prometheus_port: 8091
+  log_level: "INFO"
+
+# News sources configuration
+sources:
+  # RSS Sources
+  - name: "bbc-news"
+    type: "rss"
+    url: "http://feeds.bbci.co.uk/news/rss.xml"
+    enabled: true
+    update_mechanism: "polling"
+    polling_config:
+      interval_seconds: 300  # 5 minutes
+      max_concurrent_requests: 1
+      timeout_seconds: 30
+      retry_attempts: 3
+      retry_delay_seconds: 5
+
+  - name: "reuters-world"
+    type: "rss"
+    url: "https://feeds.reuters.com/reuters/worldNews"
+    enabled: true
+    update_mechanism: "polling"
+    polling_config:
+      interval_seconds: 600  # 10 minutes
+      max_concurrent_requests: 1
+      timeout_seconds: 30
+      retry_attempts: 3
+      retry_delay_seconds: 5
+
+  - name: "techcrunch"
+    type: "rss"
+    url: "https://techcrunch.com/feed/"
+    enabled: true
+    update_mechanism: "polling"
+    polling_config:
+      interval_seconds: 900  # 15 minutes
+      max_concurrent_requests: 1
+      timeout_seconds: 30
+      retry_attempts: 3
+      retry_delay_seconds: 5
+
+  # Example event-driven sources (not implemented yet)
+  - name: "telegram-channel"
+    type: "telegram_event"
+    url: "https://api.telegram.org"
+    enabled: false
+    update_mechanism: "event_driven"
+    event_config:
+      port: 8081
+      event_buffer_size: 1000
+      max_event_age_seconds: 300
+    credentials:
+      bot_token: "your-telegram-bot-token"
+      channel_id: "@your-channel"
+
+  - name: "websocket-feed"
+    type: "websocket"
+    url: "wss://example.com/news-feed"
+    enabled: false
+    update_mechanism: "event_driven"
+    event_config:
+      port: 8082
+      event_buffer_size: 500
+      max_event_age_seconds: 60
+    credentials:
+      api_key: "your-api-key"
+
+  - name: "webhook-receiver"
+    type: "webhook"
+    url: "http://localhost:8080/webhook"
+    enabled: false
+    update_mechanism: "event_driven"
+    event_config:
+      port: 8083
+      event_buffer_size: 200
+      max_event_age_seconds: 120
+    credentials:
+      secret_token: "your-webhook-secret"
