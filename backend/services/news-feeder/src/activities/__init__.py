@@ -1,0 +1,1 @@
+"""Temporal activities for news processing."""
