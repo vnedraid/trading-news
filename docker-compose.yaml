@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "${APP_PORT}:7777"  # Используем переменную для порта хоста
+    env_file:
+      - .env  # Подключаем файл .env

@@ -173,6 +173,12 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+
+alter_bot/
+config/
+example_data/
+
+
 bin
 obj
 .vscode

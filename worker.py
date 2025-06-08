@@ -1,20 +1,23 @@
 import asyncio
 
-from activities import translate_phrase
+from activities import run_agent
 from temporalio.client import Client
 from temporalio.worker import Worker
-from workflow import LangChainWorkflow
+from workflow import LangChainWorkflow, LoaderWorkFlow
+from concurrent.futures import ProcessPoolExecutor
+import os
 
 interrupt_event = asyncio.Event()
 
 
 async def main():
-    client = await Client.connect("localhost:7233")
+    client = await Client.connect(os.getenv("TEMPORAL_HOST", "localhost:7233"))
     worker = Worker(
         client,
         task_queue="langchain-task-queue",
-        workflows=[LangChainWorkflow],
-        activities=[translate_phrase],
+        workflows=[LangChainWorkflow, LoaderWorkFlow],
+        activities=[run_agent],
+        activity_executor=ProcessPoolExecutor(max_workers=3),
     )
 
     print("\nWorker started, ctrl+c to exit\n")
