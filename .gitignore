@@ -176,3 +176,7 @@ cython_debug/
 bin
 obj
 .vscode
+bin
+obj
+
+.vscode
