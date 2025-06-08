@@ -41,7 +41,6 @@
 
 <script setup>
 import SettingsDialog from "@/components/SettingsDialog.vue";
-import { Button } from "@/components/ui/button";
 import { GalleryVerticalEnd, Icon, Link, SettingsIcon } from "lucide-vue-next";
 import { useRoute } from "vue-router";
 
@@ -54,6 +53,6 @@ const isActive = (href) => {
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "News", href: "/news" },
+  // { label: "News", href: "/news" },
 ];
 </script>

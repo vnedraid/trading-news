@@ -2,184 +2,105 @@
   <div class="flex-auto bg-gray-50 p-6 w-full">
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 h-full">
       <!-- Main Content Container -->
-      <Card class="lg:col-span-3">
+      <Card class="lg:col-span-3 gap-4">
+        <CardHeader>
+          <CardTitle class="text-4xl"> Today Summary </CardTitle>
+        </CardHeader>
         <CardContent class="space-y-6 h-full flex flex-col">
           <!-- Large Content Area -->
-          <Card
-            class="bg-gray-50 p-8 min-h-[400px] flex items-center justify-center flex-auto relative overflow-auto"
+          <div
+            class="p-8 min-h-[400px] flex items-center justify-center flex-auto relative overflow-auto border-0"
           >
-            <CardContent class="text-center absolute top-0 left-0">
-              <div class="py-4">
-                <h1
-                  class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
+            <div class="flex flex-col absolute top-0 left-0 w-full gap-4">
+              <Accordion type="multiple" class="w-full" collapsible>
+                <AccordionItem
+                  v-for="(item, index) in summary.body"
+                  :key="index"
+                  :value="item.ticker"
                 >
-                  The Joke Tax Chronicles
-                </h1>
-                <p class="leading-7 [&:not(:first-child)]:mt-6">
-                  Once upon a time, in a far-off land, there was a very lazy
-                  king who spent all day lounging on his throne. One day, his
-                  advisors came to him with a problem: the kingdom was running
-                  out of money.
-                </p>
-                <h2
-                  class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
-                >
-                  The King's Plan
-                </h2>
-                <p class="leading-7 [&:not(:first-child)]:mt-6">
-                  The king thought long and hard, and finally came up with
-                  <a
-                    href="#"
-                    class="font-medium text-primary underline underline-offset-4"
-                  >
-                    a brilliant plan
+                  <AccordionTrigger>
+                    <div class="inline-flex items-start gap-2">
+                      {{ item.summary }}
+                      <Badge class="inline-flex" variant="outline">
+                        {{ item.ticker }}
+                      </Badge>
+                      <Badge
+                        class="inline-flex min-h-[22px]"
+                        v-if="item.forecast !== FORECAST.NEUTRAl"
+                        variant="outline"
+                      >
+                        <TrendingUp
+                          v-if="item.forecast === FORECAST.POSITIVE"
+                          class="inline-flex size-6"
+                        />
+                        <TrendingDown
+                          v-if="item.forecast === FORECAST.NEGATIVE"
+                          class="inline-flex size-6"
+                        />
+                      </Badge>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <span class="text-muted-foreground">
+                      {{ item.interpretation }}
+                    </span>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+              <!-- <Card
+                v-for="(summaryItem, index) in summary.body"
+                :key="index"
+                class="gap-2 bg-white flex flex-col hover:bg-gray-50 transition-colors w-full p-4 px-0"
+              >
+                <CardHeader class="w-full">
+                  <CardTitle class="line-clamp-2 flex gap-4 text-xl">
+                    {{ summaryItem.ticker }}
+
+                    <Badge
+                      v-if="summaryItem.forecast !== FORECAST.NEUTRAl"
+                      variant="outline"
+                    >
+                      <TrendingUp
+                        v-if="summaryItem.forecast === FORECAST.POSITIVE"
+                        class="inline-flex size-6"
+                      />
+                      <TrendingDown
+                        v-if="summaryItem.forecast === FORECAST.NEGATIVE"
+                        class="inline-flex size-6"
+                      />
+                    </Badge>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <a :href="summaryItem.sources[0]" target="_blank">
+                    <div class="flex gap-2 font-medium">
+                      {{ summaryItem.summary }}
+                    </div>
                   </a>
-                  : he would tax the jokes in the kingdom.
-                </p>
-                <blockquote class="mt-6 border-l-2 pl-6 italic">
-                  "After all," he said, "everyone enjoys a good joke, so it's
-                  only fair that they should pay for the privilege."
-                </blockquote>
-                <h3
-                  class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight"
-                >
-                  The Joke Tax
-                </h3>
-                <p class="leading-7 [&:not(:first-child)]:mt-6">
-                  The king's subjects were not amused. They grumbled and
-                  complained, but the king was firm:
-                </p>
-                <ul class="my-6 ml-6 list-disc [&>li]:mt-2">
-                  <li>1st level of puns: 5 gold coins</li>
-                  <li>2nd level of jokes: 10 gold coins</li>
-                  <li>3rd level of one-liners : 20 gold coins</li>
-                </ul>
-                <p class="leading-7 [&:not(:first-child)]:mt-6">
-                  As a result, people stopped telling jokes, and the kingdom
-                  fell into a gloom. But there was one person who refused to let
-                  the king's foolishness get him down: a court jester named
-                  Jokester.
-                </p>
-                <h3
-                  class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight"
-                >
-                  Jokester's Revolt
-                </h3>
-                <p class="leading-7 [&:not(:first-child)]:mt-6">
-                  Jokester began sneaking into the castle in the middle of the
-                  night and leaving jokes all over the place: under the king's
-                  pillow, in his soup, even in the royal toilet. The king was
-                  furious, but he couldn't seem to stop Jokester.
-                </p>
-                <p class="leading-7 [&:not(:first-child)]:mt-6">
-                  And then, one day, the people of the kingdom discovered that
-                  the jokes left by Jokester were so funny that they couldn't
-                  help but laugh. And once they started laughing, they couldn't
-                  stop.
-                </p>
-                <h3
-                  class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight"
-                >
-                  The People's Rebellion
-                </h3>
-                <p class="leading-7 [&:not(:first-child)]:mt-6">
-                  The people of the kingdom, feeling uplifted by the laughter,
-                  started to tell jokes and puns again, and soon the entire
-                  kingdom was in on the joke.
-                </p>
-                <div class="my-6 w-full overflow-y-auto">
-                  <table class="w-full">
-                    <thead>
-                      <tr class="m-0 border-t p-0 even:bg-muted">
-                        <th
-                          class="border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right"
-                        >
-                          King's Treasury
-                        </th>
-                        <th
-                          class="border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right"
-                        >
-                          People's happiness
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="m-0 border-t p-0 even:bg-muted">
-                        <td
-                          class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
-                        >
-                          Empty
-                        </td>
-                        <td
-                          class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
-                        >
-                          Overflowing
-                        </td>
-                      </tr>
-                      <tr class="m-0 border-t p-0 even:bg-muted">
-                        <td
-                          class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
-                        >
-                          Modest
-                        </td>
-                        <td
-                          class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
-                        >
-                          Satisfied
-                        </td>
-                      </tr>
-                      <tr class="m-0 border-t p-0 even:bg-muted">
-                        <td
-                          class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
-                        >
-                          Full
-                        </td>
-                        <td
-                          class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right"
-                        >
-                          Ecstatic
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <p class="leading-7 [&:not(:first-child)]:mt-6">
-                  The king, seeing how much happier his subjects were, realized
-                  the error of his ways and repealed the joke tax. Jokester was
-                  declared a hero, and the kingdom lived happily ever after.
-                </p>
-                <p class="leading-7 [&:not(:first-child)]:mt-6">
-                  The moral of the story is: never underestimate the power of a
-                  good laugh and always be careful of bad ideas.
-                </p>
-              </div>
-              <p class="text-sm text-gray-400 mt-1">
-                Здесь будет размещен основной контент
-              </p>
-            </CardContent>
-          </Card>
+                  <CardDescription>
+                    {{ summaryItem.interpretation }}
+                  </CardDescription>
+                </CardContent>
+                <CardFooter v-if="summaryItem.sources[0]"> </CardFooter>
+              </Card> -->
+            </div>
+          </div>
+
+          <Separator />
 
           <!-- Three Bottom Content Areas -->
-          <Card class="bg-gray-50 gap-4">
+          <Card class="bg-gray-50 gap-4" v-if="summary.sources.length > 0">
             <CardHeader>
               <CardTitle>Sources</CardTitle>
             </CardHeader>
             <CardContent class="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Card
-                v-for="index in 3"
+                v-for="(source, index) in summary.sources"
                 :key="index"
                 class="gap-2 bg-white flex flex-col hover:bg-gray-50 transition-colors cursor-pointer w-full"
               >
                 <CardHeader class="w-full">
-                  <CardTitle class="line-clamp-2"
-                    >Why Meta Stock Is the Smarter Buy Than Google |
-                    Trefis</CardTitle
-                  >
-                  <!-- <CardDescription class="line-clamp-2">
-                    Deploy your new project in one-click. Deploy your new
-                    project in one-click. Deploy your new project in one-click.
-                    Deploy your new project in one-click.
-                  </CardDescription> -->
+                  <CardTitle class="line-clamp-2">{{ source.title }}</CardTitle>
                 </CardHeader>
                 <CardContent class="flex justify-start text-left">
                   <a
@@ -187,7 +108,7 @@
                     target="_blank"
                     class="text-xs opacity-60 max-w-40 truncate"
                   >
-                    https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html
+                    {{ source.link }}
                   </a>
                 </CardContent>
               </Card>
@@ -203,31 +124,26 @@
           <div class="space-y-3 relative h-full overflow-auto">
             <div class="flex flex-col gap-4 absolute w-full">
               <Card
-                v-for="index in 10"
+                v-for="(item, index) in summary.shortNews"
                 :key="index"
                 class="gap-2 bg-white flex flex-col hover:bg-gray-50 transition-colors cursor-pointer w-full"
               >
                 <CardHeader class="w-full">
-                  <CardTitle class="line-clamp-2">
-                    Protagenic Therapeutics Announces Second Quarter 2021
-                    Results and Provides Business Update</CardTitle
-                  >
+                  <CardTitle class="line-clamp-2"> {{ item.title }}</CardTitle>
                   <CardDescription class="line-clamp-1">
-                    Mon Aug 30 2021
+                    {{ item.date }}
                   </CardDescription>
                   <CardDescription class="line-clamp-3">
-                    Deploy your new project in one-click. Deploy your new
-                    project in one-click. Deploy your new project in one-click.
-                    Deploy your new project in one-click.
+                    {{ item.desciprion }}
                   </CardDescription>
                 </CardHeader>
                 <CardContent class="flex justify-start text-left">
                   <a
-                    href="https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html"
+                    :href="item.link"
                     target="_blank"
                     class="text-xs opacity-60 max-w-40 truncate"
                   >
-                    https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html
+                    {{ item.link }}
                   </a>
                 </CardContent>
               </Card>
@@ -239,16 +155,35 @@
   </div>
 </template>
 
-<script setup>
-import { Button } from "@/components/ui/button";
+<script setup lang="ts">
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { onMounted } from "vue";
+import { Badge } from "@/components/ui/badge";
+import { TrendingDown, TrendingUp } from "lucide-vue-next";
+import { Separator } from "@/components/ui/separator";
+import { useSummaryStore, type Root } from "@/shared/store/app";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+enum FORECAST {
+  POSITIVE = "positive",
+  NEGATIVE = "negative",
+  NEUTRAl = "neutral",
+}
+
+defineProps<{ summary: Root }>();
 
 // Component logic can be added here
 </script>

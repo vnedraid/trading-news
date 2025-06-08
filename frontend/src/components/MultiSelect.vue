@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useFilter } from "reka-ui";
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch, type PropType } from "vue";
 import {
   Combobox,
   ComboboxAnchor,
@@ -18,42 +18,30 @@ import {
   TagsInputItemText,
 } from "@/components/ui/tags-input";
 
-const frameworks = [
-  { value: "next.js", label: "Next.js" },
-  { value: "sveltekit", label: "SvelteKit" },
-  { value: "nuxt", label: "Nuxt" },
-  { value: "remix", label: "Remix" },
-  { value: "astro", label: "Astro" },
-];
-
-const modelValue = ref<string[]>([]);
 const open = ref(false);
 const searchTerm = ref("");
-defineProps({
+const props = defineProps({
   placeholder: String,
+  options: Array as PropType<{ label: string; value: string }[]>,
 });
 const emits = defineEmits(["change"]);
+const model = defineModel<string[]>({ default: [] });
 
 const { contains } = useFilter({ sensitivity: "base" });
-const filteredFrameworks = computed(() => {
-  const options = frameworks.filter((i) => !modelValue.value.includes(i.label));
+const filteredOptions = computed(() => {
+  const options = props.options.filter((i) => !model.value.includes(i.label));
   return searchTerm.value
     ? options.filter((option) => contains(option.label, searchTerm.value))
     : options;
 });
-
-watch(modelValue.value, (newValue) => {
-  console.log(newValue);
-  emits("change", newValue);
-});
 </script>
 
 <template>
-  <Combobox v-model="modelValue" v-model:open="open" :ignore-filter="true">
+  <Combobox v-model="model" v-model:open="open" :ignore-filter="true">
     <ComboboxAnchor as-child>
-      <TagsInput v-model="modelValue" class="px-2 gap-2 w-80">
+      <TagsInput v-model="model" class="px-2 gap-2 w-80">
         <div class="flex gap-2 flex-wrap items-center">
-          <TagsInputItem v-for="item in modelValue" :key="item" :value="item">
+          <TagsInputItem v-for="item in model" :key="item" :value="item">
             <TagsInputItemText />
             <TagsInputItemDelete />
           </TagsInputItem>
@@ -72,15 +60,15 @@ watch(modelValue.value, (newValue) => {
         <ComboboxEmpty />
         <ComboboxGroup>
           <ComboboxItem
-            v-for="framework in filteredFrameworks"
+            v-for="framework in filteredOptions"
             :key="framework.value"
             :value="framework.label"
             @select.prevent="
               (ev) => {
                 if (typeof ev.detail.value === 'string') {
                   searchTerm = '';
-                  modelValue.push(ev.detail.value);
-                  console.log(modelValue);
+                  model.push(ev.detail.value);
+                  console.log(model);
                 }
               }
             "

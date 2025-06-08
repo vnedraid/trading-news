@@ -1,7 +1,4 @@
-// tailwind.config.js
 module.exports = {
-  theme: {
-    // ...
-  },
+  theme: {},
   plugins: [require("@tailwindcss/line-clamp")],
 };

@@ -1,11 +1,18 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import DefaultLayout from "./app/layouts/DefaultLayout.vue";
+import { useSummaryStore } from "./shared/store/app";
 
 const route = useRoute();
 
 const layout = computed(() => route.meta.layout ?? DefaultLayout);
+
+const { getSumaryBySettings } = useSummaryStore();
+
+onMounted(() => {
+  getSumaryBySettings();
+});
 </script>
 
 <template>

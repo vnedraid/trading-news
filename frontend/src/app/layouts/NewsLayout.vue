@@ -44,10 +44,6 @@ import SettingsDialog from "@/components/SettingsDialog.vue";
 import { GalleryVerticalEnd, Icon, Link, Settings } from "lucide-vue-next";
 import { useRoute } from "vue-router";
 
-const route = useRoute();
-
-const handleOpenSettings = () => {};
-
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "News", href: "/news" },

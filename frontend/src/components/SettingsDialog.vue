@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
@@ -14,36 +13,97 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { SettingsIcon } from "lucide-vue-next";
 import MultiSelect from "./MultiSelect.vue";
 import { ref, watch } from "vue";
+import { useSummaryStore } from "@/shared/store/app";
+import { useLocalStorage } from "@vueuse/core";
+
+const localSotrage = useLocalStorage("settings", {
+  sectors: [],
+  tickers: [],
+  style: "aggresive",
+});
+
 const sellingStyles = [
   { label: "Агрессивный", value: "aggresive" },
   { label: "Умеренный", value: "temperate" },
   { label: "Пассивный", value: "passive" },
 ];
-const sectors = ref([]);
 
+const open = ref(false);
+const store = useSummaryStore();
 const handleChangeSector = (value: string[]) => {
-  sectors.value = value;
+  localSotrage.value.sectors = value;
 };
 
-const tickers = ref([]);
 const handleChangeTicker = (value: string[]) => {
-  tickers.value = value;
+  localSotrage.value.tickers = value;
 };
 
-const radioValue = ref("");
-watch(radioValue, (newValue) => console.log(newValue));
+const radioValue = ref(sellingStyles[0].value);
+watch(radioValue, (newValue) => (localSotrage.value.style = newValue));
 
-const handleSubmit = () => {
-  console.log({
-    sectors: sectors.value,
-    tickers: tickers.value,
-    style: radioValue.value,
-  });
+const sectorsOptions = [
+  {
+    label: "Transportation",
+    value: "Transportation",
+  },
+  {
+    label: "Technology",
+    value: "Technology",
+  },
+  {
+    label: "Retail",
+    value: "Retail",
+  },
+  {
+    label: "Finance",
+    value: "Finance",
+  },
+  {
+    label: "Distribution",
+    value: "Distribution",
+  },
+];
+
+const tickerOptions = [
+  {
+    label: "EURUSD",
+    value: "EURUSD",
+  },
+  {
+    label: "BTCUSD",
+    value: "BTCUSD",
+  },
+  {
+    label: "ETHUSD",
+    value: "ETHUSD",
+  },
+  {
+    label: "GBPUSD",
+    value: "GBPUSD",
+  },
+  {
+    label: "USDJPY",
+    value: "USDJPY",
+  },
+  {
+    label: "S&P500",
+    value: "S&P500",
+  },
+  {
+    label: "TON",
+    value: "TON",
+  },
+];
+
+const handleSubmit = async () => {
+  console.log(localSotrage.value);
+  await store.getSumaryBySettings(localSotrage.value);
+  open.value = false;
 };
 </script>
 
 <template>
-  <Dialog>
+  <Dialog v-model:open="open">
     <DialogTrigger as-child>
       <Button variant="outline" size="icon">
         <SettingsIcon />
@@ -56,16 +116,24 @@ const handleSubmit = () => {
       <div class="grid gap-4 py-4">
         <Label> Секторы </Label>
         <div class="grid grid-cols-4 items-center gap-4">
-          <MultiSelect @change="handleChangeSector" />
+          <MultiSelect
+            v-model="localSotrage.sectors"
+            @change="handleChangeSector"
+            :options="sectorsOptions"
+          />
         </div>
         <Label> Тикеры </Label>
         <div class="grid grid-cols-4 items-center gap-4">
-          <MultiSelect @change="handleChangeTicker" />
+          <MultiSelect
+            v-model="localSotrage.tickers"
+            @change="handleChangeTicker"
+            :options="tickerOptions"
+          />
         </div>
         <Label> Стиль торговли </Label>
         <RadioGroup
           v-model="radioValue"
-          :default-value="sellingStyles[1].value"
+          :default-value="sellingStyles[0].value"
           :orientation="'vertical'"
         >
           <div

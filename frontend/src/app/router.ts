@@ -22,15 +22,15 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/home",
     name: "home",
-    component: () => import("@/pages/Home.vue"),
+    component: () => import("@/pages/Summary.vue"),
     meta: { layout: HomeLayout },
   },
-  {
-    path: "/news",
-    name: "news",
-    component: () => import("@/pages/News.vue"),
-    meta: { layout: NewsLayout },
-  },
+  // {
+  //   path: "/news",
+  //   name: "news",
+  //   component: () => import("@/pages/News.vue"),
+  //   meta: { layout: NewsLayout },
+  // },
 ];
 
 export const router = createRouter({
