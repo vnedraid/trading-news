@@ -15,6 +15,7 @@ import MultiSelect from "./MultiSelect.vue";
 import { ref, watch } from "vue";
 import { useSummaryStore } from "@/shared/store/app";
 import { useLocalStorage } from "@vueuse/core";
+import { tickerOptions } from "@/shared/lib/const";
 
 const localSotrage = useLocalStorage("settings", {
   sectors: [],
@@ -42,57 +43,18 @@ const radioValue = ref(sellingStyles[0].value);
 watch(radioValue, (newValue) => (localSotrage.value.style = newValue));
 
 const sectorsOptions = [
-  {
-    label: "Transportation",
-    value: "Transportation",
-  },
-  {
-    label: "Technology",
-    value: "Technology",
-  },
-  {
-    label: "Retail",
-    value: "Retail",
-  },
-  {
-    label: "Finance",
-    value: "Finance",
-  },
-  {
-    label: "Distribution",
-    value: "Distribution",
-  },
-];
-
-const tickerOptions = [
-  {
-    label: "EURUSD",
-    value: "EURUSD",
-  },
-  {
-    label: "BTCUSD",
-    value: "BTCUSD",
-  },
-  {
-    label: "ETHUSD",
-    value: "ETHUSD",
-  },
-  {
-    label: "GBPUSD",
-    value: "GBPUSD",
-  },
-  {
-    label: "USDJPY",
-    value: "USDJPY",
-  },
-  {
-    label: "S&P500",
-    value: "S&P500",
-  },
-  {
-    label: "TON",
-    value: "TON",
-  },
+  "Защита потребителей",
+  "Здравоохранение",
+  "Информационные технологии",
+  "Коммунальные услуги",
+  "Коммуникационные услуги",
+  "Материалы",
+  "Недвижимость",
+  "Потребительские товары длительного пользования",
+  "Потребительские товары не длительного пользования",
+  "Промышленность",
+  "Финансы",
+  "Энергетика",
 ];
 
 const handleSubmit = async () => {

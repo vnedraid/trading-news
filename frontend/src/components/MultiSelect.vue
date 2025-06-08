@@ -22,16 +22,16 @@ const open = ref(false);
 const searchTerm = ref("");
 const props = defineProps({
   placeholder: String,
-  options: Array as PropType<{ label: string; value: string }[]>,
+  options: Array as PropType<string[]>,
 });
 const emits = defineEmits(["change"]);
 const model = defineModel<string[]>({ default: [] });
 
 const { contains } = useFilter({ sensitivity: "base" });
 const filteredOptions = computed(() => {
-  const options = props.options.filter((i) => !model.value.includes(i.label));
+  const options = props.options.filter((i) => !model.value.includes(i));
   return searchTerm.value
-    ? options.filter((option) => contains(option.label, searchTerm.value))
+    ? options.filter((option) => contains(option, searchTerm.value))
     : options;
 });
 </script>
@@ -61,8 +61,8 @@ const filteredOptions = computed(() => {
         <ComboboxGroup>
           <ComboboxItem
             v-for="framework in filteredOptions"
-            :key="framework.value"
-            :value="framework.label"
+            :key="framework"
+            :value="framework"
             @select.prevent="
               (ev) => {
                 if (typeof ev.detail.value === 'string') {
@@ -73,7 +73,7 @@ const filteredOptions = computed(() => {
               }
             "
           >
-            {{ framework.label }}
+            {{ framework }}
           </ComboboxItem>
         </ComboboxGroup>
       </ComboboxList>
