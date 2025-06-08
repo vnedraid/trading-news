@@ -1,0 +1,64 @@
+version = 1
+revision = 2
+requires-python = ">=3.13"
+
+[[package]]
+name = "protobuf"
+version = "6.31.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/52/f3/b9655a711b32c19720253f6f06326faf90580834e2e83f840472d752bc8b/protobuf-6.31.1.tar.gz", hash = "sha256:d8cac4c982f0b957a4dc73a80e2ea24fab08e679c0de9deb835f4a12d69aca9a", size = 441797, upload-time = "2025-05-28T19:25:54.947Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f3/6f/6ab8e4bf962fd5570d3deaa2d5c38f0a363f57b4501047b5ebeb83ab1125/protobuf-6.31.1-cp310-abi3-win32.whl", hash = "sha256:7fa17d5a29c2e04b7d90e5e32388b8bfd0e7107cd8e616feef7ed3fa6bdab5c9", size = 423603, upload-time = "2025-05-28T19:25:41.198Z" },
+    { url = "https://files.pythonhosted.org/packages/44/3a/b15c4347dd4bf3a1b0ee882f384623e2063bb5cf9fa9d57990a4f7df2fb6/protobuf-6.31.1-cp310-abi3-win_amd64.whl", hash = "sha256:426f59d2964864a1a366254fa703b8632dcec0790d8862d30034d8245e1cd447", size = 435283, upload-time = "2025-05-28T19:25:44.275Z" },
+    { url = "https://files.pythonhosted.org/packages/6a/c9/b9689a2a250264a84e66c46d8862ba788ee7a641cdca39bccf64f59284b7/protobuf-6.31.1-cp39-abi3-macosx_10_9_universal2.whl", hash = "sha256:6f1227473dc43d44ed644425268eb7c2e488ae245d51c6866d19fe158e207402", size = 425604, upload-time = "2025-05-28T19:25:45.702Z" },
+    { url = "https://files.pythonhosted.org/packages/76/a1/7a5a94032c83375e4fe7e7f56e3976ea6ac90c5e85fac8576409e25c39c3/protobuf-6.31.1-cp39-abi3-manylinux2014_aarch64.whl", hash = "sha256:a40fc12b84c154884d7d4c4ebd675d5b3b5283e155f324049ae396b95ddebc39", size = 322115, upload-time = "2025-05-28T19:25:47.128Z" },
+    { url = "https://files.pythonhosted.org/packages/fa/b1/b59d405d64d31999244643d88c45c8241c58f17cc887e73bcb90602327f8/protobuf-6.31.1-cp39-abi3-manylinux2014_x86_64.whl", hash = "sha256:4ee898bf66f7a8b0bd21bce523814e6fbd8c6add948045ce958b73af7e8878c6", size = 321070, upload-time = "2025-05-28T19:25:50.036Z" },
+    { url = "https://files.pythonhosted.org/packages/f7/af/ab3c51ab7507a7325e98ffe691d9495ee3d3aa5f589afad65ec920d39821/protobuf-6.31.1-py3-none-any.whl", hash = "sha256:720a6c7e6b77288b85063569baae8536671b39f15cc22037ec7045658d80489e", size = 168724, upload-time = "2025-05-28T19:25:53.926Z" },
+]
+
+[[package]]
+name = "signal-sender"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "temporalio" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "temporalio", specifier = ">=1.12.0" }]
+
+[[package]]
+name = "temporalio"
+version = "1.12.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "protobuf" },
+    { name = "types-protobuf" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6a/c1/eb11d767dfd92c23e88a1bdf95a2a66b39402bc509c2fc923da60e23c423/temporalio-1.12.0.tar.gz", hash = "sha256:04e451b1560e64e0276280dd450adc3c867d06d8ebcf91b391fa137a48f26bc7", size = 1545662, upload-time = "2025-05-30T16:28:45.764Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/26/05/f700ba36c63956c5ec206d7fbc166993df896d387477def327b7622ac32a/temporalio-1.12.0-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:388b7506bd5f651b784ed950b37221dad7166be5568e066e084df28cecc73db6", size = 11993920, upload-time = "2025-05-30T16:28:32.749Z" },
+    { url = "https://files.pythonhosted.org/packages/16/52/b9971cef1a161b7d2c2f85a6c30fc2756163d59561c9677c4fa302c9f4fc/temporalio-1.12.0-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:9426cf4fdad57d2e4a5dec9275bde88b2e5eb9d482f92398bfd343ba976736f4", size = 11628690, upload-time = "2025-05-30T16:28:35.728Z" },
+    { url = "https://files.pythonhosted.org/packages/e7/a3/0bd3d4ce52fb58c185cf6191bd892937a88480e9447c81fcde6456de2e10/temporalio-1.12.0-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:7fabe80ab86b34aaee04066499d6a2f98903a6c918da4bedfb443474558a2075", size = 12064891, upload-time = "2025-05-30T16:28:38.17Z" },
+    { url = "https://files.pythonhosted.org/packages/11/2d/fcff58fd8756e9a231e6022a8d95b2b1cbda5a7d504b15c1372a00bf6cf5/temporalio-1.12.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e74c54ba32b8ae13ed3f611a8d9331e157aa36c96de0a86723a8bbeef885b6a2", size = 12319618, upload-time = "2025-05-30T16:28:41.558Z" },
+    { url = "https://files.pythonhosted.org/packages/38/03/18bd6938a1d3c307de616f290965de25c6340e245658e3d7328669ea5add/temporalio-1.12.0-cp39-abi3-win_amd64.whl", hash = "sha256:80a4c1842b24529931c4dcab7484a61b1138547aca3bca64f11590db89daeadd", size = 12359195, upload-time = "2025-05-30T16:28:43.906Z" },
+]
+
+[[package]]
+name = "types-protobuf"
+version = "6.30.2.20250516"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ac/6c/5cf088aaa3927d1cc39910f60f220f5ff573ab1a6485b2836e8b26beb58c/types_protobuf-6.30.2.20250516.tar.gz", hash = "sha256:aecd1881770a9bb225ede66872ef7f0da4505edd0b193108edd9892e48d49a41", size = 62254, upload-time = "2025-05-16T03:06:50.794Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c0/66/06a9c161f5dd5deb4f5c016ba29106a8f1903eb9a1ba77d407dd6588fecb/types_protobuf-6.30.2.20250516-py3-none-any.whl", hash = "sha256:8c226d05b5e8b2623111765fa32d6e648bbc24832b4c2fddf0fa340ba5d5b722", size = 76480, upload-time = "2025-05-16T03:06:49.444Z" },
+]
+
+[[package]]
+name = "typing-extensions"
+version = "4.14.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d1/bc/51647cd02527e87d05cb083ccc402f93e441606ff1f01739a62c8ad09ba5/typing_extensions-4.14.0.tar.gz", hash = "sha256:8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4", size = 107423, upload-time = "2025-06-02T14:52:11.399Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/69/e0/552843e0d356fbb5256d21449fa957fa4eff3bbc135a74a691ee70c7c5da/typing_extensions-4.14.0-py3-none-any.whl", hash = "sha256:a1514509136dd0b477638fc68d6a91497af5076466ad0fa6c338e44e359944af", size = 43839, upload-time = "2025-06-02T14:52:10.026Z" },
+]

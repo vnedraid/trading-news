@@ -1,0 +1,33 @@
+{
+    "folders": [
+        {
+            "name": "Trading News",
+            "path": "."
+        },
+        {
+            "name": "C# Listener Service",
+            "path": "./backend/services/listener"
+        },
+        {
+            "name": "Python Signal Sender",
+            "path": "./backend/services/signal-sender"
+        }
+    ],
+    "settings": {
+        "dotnet.defaultSolution": "./trading-news.sln",
+        "python.defaultInterpreterPath": "uv",
+        "python.terminal.activateEnvironment": false,
+        "files.associations": {
+            "*.cs": "csharp"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-dotnettools.csharp",
+            "ms-dotnettools.csdevkit",
+            "ms-python.python",
+            "ms-python.pylint",
+            "ms-python.black-formatter"
+        ]
+    }
+}
