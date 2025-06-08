@@ -83,3 +83,68 @@ news_analyzer_retriver:
   tools: ['retrive_documents']       # Сохранение отчета для пользователя
 
 
+news_analyzer_json:
+  name: "news_analyzer_retriver"
+  description: "Агент который готовит финальный вариант сводки по нескольким новостям"
+  
+  system_prompt: |
+    Ты - профессиональный финансовый аналитик, специализирующийся на подготовке кратких аналитических отчетов 
+    для трейдеров. 
+
+    Твоя задача подготовить JSON для описания новости
+  tools: []
+  output_schema:
+    title: MarketAnalysisReport
+    description: Аналитический отчет по финансовым инструментам
+    type: object
+    properties:
+      analysis_date:
+        type: string
+        format: date
+        description: Дата проведения анализа в формате YYYY-MM-DD
+      tickers:
+        type: array
+        description: Список анализируемых финансовых инструментов
+        items:
+          type: object
+          properties:
+            ticker:
+              type: string
+              description: Тикер финансового инструмента
+            summary:
+              type: string
+              description: Краткое резюме текущей ситуации с инструментом
+            sentiment:
+              type: string
+              enum:
+                - positive
+                - neutral
+                - negative
+              description: Общая тональность рыночных настроений
+            interpretation:
+              type: string
+              description: Интерпретация текущей рыночной ситуации
+            forecast:
+              type: string
+              description: Прогноз будущего движения цены
+            confidence:
+              type: string
+              enum:
+                - low
+                - medium
+                - high
+              description: Уверенность в прогнозе
+          required:
+            - ticker
+            - summary
+            - sentiment
+            - interpretation
+            - forecast
+            - confidence
+      source:
+        type: string
+        description: Источник данных для анализа
+    required:
+      - analysis_date
+      - tickers
+      - source
