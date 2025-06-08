@@ -65,9 +65,11 @@ export const useSummaryStore = defineStore("summary", () => {
         data,
         { params: query }
       );
-      summary.value.body = res.data.summary.body;
-      summary.value.sources = [...res.data.summary.sources].splice(0, 3);
-      summary.value.shortNews = res.data.summary.shortNews;
+      const result = JSON.parse(res.data.messages.at(-1).content);
+      console.log(result);
+      summary.value.body = result.body;
+      summary.value.sources = [...db.summary.sources].splice(0, 3);
+      summary.value.shortNews = db.summary.shortNews;
     } catch {
       summary.value.body = db.summary.body;
       summary.value.sources = [...db.summary.sources].splice(0, 3);
