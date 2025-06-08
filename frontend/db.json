@@ -1,0 +1,1929 @@
+{
+  "summary": {
+    "body": [
+      {
+        "ticker": "EURUSD",
+        "summary": "Единая валюта теряет к доллару, откатившись до 1.13 на слабых PMI, но ожидается рост к 1.20–1.25 в долгосрочной перспективе.",
+        "interpretation": "Нейтрально — краткосрочное ослабление, но долгосрочный тренд остаётся повышательным.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15901.html"
+        ]
+      },
+      {
+        "ticker": "BTCUSD",
+        "summary": "Биткойн растёт на фоне продвижения законодательства о стейблкоинах и притока капитала в ETF.",
+        "interpretation": "Позитивно — увеличение спроса и поддержка со стороны регуляторов.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15902.html",
+          "https://www.fxteam.ru/forex/opinion/15905.html"
+        ]
+      },
+      {
+        "ticker": "ETHUSD",
+        "summary": "Ethereum борется за уровень 200-дневной скользящей средней, что может дать старт ралли до $4000.",
+        "interpretation": "Позитивно — преодоление сопротивления откроет путь для дальнейшего роста.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15902.html",
+          "https://www.fxteam.ru/forex/opinion/15913.html"
+        ]
+      },
+      {
+        "ticker": "GBPUSD",
+        "summary": "Фунт укрепляется на сильных данных по розничным продажам и ограничении пространства для снижения ставок Банком Англии.",
+        "interpretation": "Позитивно — сильная экономика поддерживает валюту.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15903.html"
+        ]
+      },
+      {
+        "ticker": "USDJPY",
+        "summary": "Пара отступила от долгосрочной поддержки на 140 с потенциалом роста до 160+.",
+        "interpretation": "Позитивно — возможен разворот к росту из-за фискальных проблем Японии.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15908.html"
+        ]
+      },
+      {
+        "ticker": "S&P500",
+        "summary": "Индекс отскочил от 200-дневной скользящей средней после откладывания введения тарифов на импорт из ЕС.",
+        "interpretation": "Позитивно — снижение рисков торговых войн.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15907.html"
+        ]
+      },
+      {
+        "ticker": "Strategy",
+        "summary": "Компания накопила токенов на сумму более $50 млрд и продолжает покупать биткоины.",
+        "interpretation": "Позитивно — крупные инвестиции поддерживают рынок.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15902.html",
+          "https://www.fxteam.ru/forex/opinion/15913.html"
+        ]
+      },
+      {
+        "ticker": "TON",
+        "summary": "Криптовалюта Telegram прибавляет на фоне успешного размещения облигаций.",
+        "interpretation": "Позитивно — успешное привлечение капитала.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15915.html"
+        ]
+      },
+      {
+        "ticker": "Marathon Digital Holdings",
+        "summary": "Компания рассматривает возможность добычи биткоинов для пополнения госрезерва США.",
+        "interpretation": "Позитивно — потенциальный рост спроса на услуги компании.",
+        "sector": "Энергетические и минеральные ресурсы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15913.html"
+        ]
+      },
+      {
+        "ticker": "Trump Media",
+        "summary": "Компания планирует привлечь $2,5 млрд для формирования биткоин-резерва.",
+        "interpretation": "Позитивно — увеличение капитализации за счёт криптоактивов.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15911.html"
+        ]
+      },
+      {
+        "ticker": "Circle",
+        "summary": "Компания обновила документы для IPO с целью привлечения $600 млн.",
+        "interpretation": "Позитивно — расширение возможностей для роста.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15911.html"
+        ]
+      },
+      {
+        "ticker": "Cardano",
+        "summary": "Основатель готов интегрировать стейблкоин RLUSD без комиссий.",
+        "interpretation": "Позитивно — поддержка сообщества и расширение функционала.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15911.html"
+        ]
+      },
+      {
+        "ticker": "Bank of America",
+        "summary": "Банк готов стать эмитентом стейблкоинов в случае легализации.",
+        "interpretation": "Позитивно — расширение присутствия на крипторынке.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15909.html"
+        ]
+      },
+      {
+        "ticker": "Tether",
+        "summary": "Компания с опаской относится к новому законопроекту о стейблкоинах.",
+        "interpretation": "Негативно — потенциальные ограничения для бизнеса.",
+        "sector": "Финансы",
+        "forecast": "negative",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15909.html"
+        ]
+      },
+      {
+        "ticker": "Reitar Logtech Holdings",
+        "summary": "Компания планирует приобрести биткоины на $1,5 млрд для хеджирования рисков.",
+        "interpretation": "Позитивно — диверсификация активов.",
+        "sector": "Финансы",
+        "forecast": "positive",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15918.html"
+        ]
+      },
+      {
+        "ticker": "Binance",
+        "summary": "Основатель предупреждает о рисках корпоративных резервов в биткоинах.",
+        "interpretation": "Нейтрально — предостережение без прямых негативных последствий.",
+        "sector": "Финансы",
+        "forecast": "neutral",
+        "sources": [
+          "https://www.fxteam.ru/forex/opinion/15918.html"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "1",
+        "title": "Why Meta Stock Is the Smarter Buy Than Google | Trefis",
+        "link": " https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html "
+      },
+      {
+        "id": "2",
+        "title": "Why Meta Stock Is the Smarter Buy Than Google | Trefis",
+        "link": " https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html "
+      },
+      {
+        "id": "3",
+        "title": "Why Meta Stock Is the Smarter Buy Than Google | Trefis",
+        "link": " https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html "
+      },
+      {
+        "id": "4",
+        "title": "Why Meta Stock Is the Smarter Buy Than Google | Trefis",
+        "link": " https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html "
+      }
+    ],
+    "shortNews": [
+      {
+        "id": "1",
+        "title": "Protagenic Therapeutics Announces Second Quarter 2021 Results and Provides Business Update",
+        "desciprion": " Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click.",
+        "date": "2024-07-02",
+        "link": " https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html "
+      },
+      {
+        "id": "2",
+        "title": "Protagenic Therapeutics Announces Second Quarter 2021 Results and Provides Business Update",
+        "desciprion": " Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click.",
+        "date": "2024-07-02",
+        "link": " https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html "
+      },
+      {
+        "id": "3",
+        "title": "Protagenic Therapeutics Announces Second Quarter 2021 Results and Provides Business Update",
+        "desciprion": " Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click.",
+        "date": "2024-07-02",
+        "link": " https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html "
+      },
+      {
+        "id": "4",
+        "title": "Protagenic Therapeutics Announces Second Quarter 2021 Results and Provides Business Update",
+        "desciprion": " Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click.",
+        "date": "2024-07-02",
+        "link": " https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html "
+      },
+      {
+        "id": "5",
+        "title": "Protagenic Therapeutics Announces Second Quarter 2021 Results and Provides Business Update",
+        "desciprion": " Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click.",
+        "date": "2024-07-02",
+        "link": " https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html "
+      },
+      {
+        "id": "6",
+        "title": "Protagenic Therapeutics Announces Second Quarter 2021 Results and Provides Business Update",
+        "desciprion": " Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click. Deploy your new project in one-click.",
+        "date": "2024-07-02",
+        "link": " https://www.globenewswire.com/news-release/2021/08/30/2288355/0/en/Protagenic-Therapeutics-to-Host-Virtual-Science-Review-Wednesday-September-8th-at-10-AM-ET.html "
+      }
+    ]
+  },
+  "settings": [
+    {
+      "id": "0bb9",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8055",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e5f7",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "dcb2",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "58b5",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "7bff",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "3c43",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4f86",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "ce79",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "29bf",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "933a",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "db93",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "1c1c",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "68ee",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "131f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a08d",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0a0b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "ae60",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "3b03",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "de68",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9887",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "6e43",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "616c",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "23cf",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9d78",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9e95",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0f2b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5ba9",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "d110",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a452",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "7ca5",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4820",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "50ce",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "55f8",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "981f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8616",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4eda",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a393",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "1fda",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0bb6",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "2e61",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5f71",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "da41",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "d722",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e2dc",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "6360",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0ba8",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e5f7",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "7bd4",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "cc55",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "ef04",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f96b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a795",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "3edc",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4e0d",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a161",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "68e5",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a11f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0ca6",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "04a9",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "045c",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "152b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4061",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9b33",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a9b6",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f6b0",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a424",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "263b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "347e",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f30f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "6305",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "3e9f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a83c",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "b474",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "958f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "7f01",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "86a0",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0978",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "285d",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "c3a8",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "dc0e",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "1a04",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "fb74",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0c57",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f1da",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "900d",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "915b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "214b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5cdc",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "7637",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "693e",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "7617",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f092",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "c9f1",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8cab",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f462",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4dd9",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "29a4",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f02e",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "6325",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e454",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "1468",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4edf",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a1ca",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "73ea",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "3e1b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "fe4f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "d14a",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e9e9",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "28f7",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "58a6",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "2fbe",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9935",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "166a",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0bfb",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "b36a",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "210e",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "fa3f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "77a2",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "275c",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "807e",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5404",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "35df",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8acd",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "ef53",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f056",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4080",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "c087",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "47eb",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "67ec",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "bfb2",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5254",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "6981",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5b1f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "3f56",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e01a",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "67e4",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8d9c",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "da8a",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "2e61",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "06e7",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f97c",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4b23",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5ec2",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "d51f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "7d9b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a5cb",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "929f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f812",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "14a1",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "22de",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "24cc",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "fd6a",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "2beb",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "3985",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8d01",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a7eb",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "b215",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a8f2",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8ddc",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5a87",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9b19",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "18ce",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "772d",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "210b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "de29",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e310",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8536",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "955a",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "1548",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9460",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f0dd",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "153b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e6d2",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5370",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e289",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "009b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "fc0f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "d482",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "fb98",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0d34",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9936",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "b1cb",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5218",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "1bb1",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "c4a6",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "d8db",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "1569",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9b2b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5f47",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "af49",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "b79b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9959",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "ef3b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "34da",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "05fc",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0190",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "296e",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e175",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e633",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e904",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5fff",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "54dd",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8151",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "d362",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "d66a",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "2709",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0cbe",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "29b8",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8e3f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "7238",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "b179",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "05ac",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "b150",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f7dc",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "20aa",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0ae1",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "52bd",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "3fa1",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "1fe6",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "35c3",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "2281",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "fa90",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4564",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "d0b8",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "ab37",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "1ac5",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9801",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "ad56",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "93be",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5a99",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "92fd",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "79cd",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "7fea",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a337",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "ba11",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f094",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0ab7",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a815",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4a35",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8024",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "fdfa",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f8fb",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e152",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "6a95",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "2053",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a86b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "1509",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "a24f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "0c13",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "db85",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f3ce",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "fc57",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4a44",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "ac1b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "d739",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f4d9",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "d643",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "3250",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "7893",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "2541",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "64c2",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "73f8",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "e3d6",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "22ba",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "be5b",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "94ed",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "da44",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "652f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "7ec0",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f2e0",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "8715",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "89fb",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "9077",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "5314",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "853f",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "f8e3",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "98dc",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "61b9",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "2187",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "945e",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    },
+    {
+      "id": "4ae3",
+      "sectors": [],
+      "tickers": [],
+      "style": "temperate"
+    }
+  ]
+}
