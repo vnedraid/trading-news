@@ -40,6 +40,16 @@ export interface Settings {
 
 export const useSummaryStore = defineStore("summary", () => {
   const summary = ref<Root>({ body: [], sources: [], shortNews: [] });
+  const visibile = ref(false);
+  const tradeMode = ref(false);
+
+  function toggle() {
+    visibile.value = !visibile.value;
+  }
+
+  function toggleTradeMode() {
+    tradeMode.value = !tradeMode.value;
+  }
 
   async function getSumaryBySettings(
     settings: Settings = { sectors: [], tickers: [], style: "temperate" }
@@ -75,5 +85,12 @@ export const useSummaryStore = defineStore("summary", () => {
     }
   }
 
-  return { summary, getSumaryBySettings };
+  return {
+    summary,
+    getSumaryBySettings,
+    toggle,
+    visibile,
+    tradeMode,
+    toggleTradeMode,
+  };
 });

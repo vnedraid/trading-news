@@ -18,19 +18,18 @@
           </RouterLink>
         </div>
 
-        <!-- Navigation Links -->
-        <!-- <nav class="items-center gap-0.5 hidden lg:flex">
-          <RouterLink
-            v-for="(link, index) in navLinks"
-            :key="index"
-            :to="link.href"
-            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5 text-primary"
-          >
-            {{ link.label }}
-          </RouterLink>
-        </nav> -->
-
-        <div class="flex ml-auto">
+        <div class="flex ml-auto gap-3">
+          <div className="flex items-center space-x-2">
+            <Switch
+              @update:model-value="handleToggle"
+              :model-value="store.tradeMode"
+              id="airplane-mode"
+            />
+            <Label htmlFor="airplane-mode">Trade Mode</Label>
+          </div>
+          <Button @click="openMap" variant="outline" size="icon">
+            <Flame />
+          </Button>
           <SettingsDialog />
         </div>
       </div>
@@ -41,10 +40,19 @@
 
 <script setup>
 import SettingsDialog from "@/components/SettingsDialog.vue";
-import { GalleryVerticalEnd } from "lucide-vue-next";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import { useSummaryStore } from "@/shared/store/app";
+import { Flame, GalleryVerticalEnd } from "lucide-vue-next";
 
-const navLinks = [
-  { label: "Home", href: "/" },
-  // { label: "News", href: "/news" },
-];
+const store = useSummaryStore();
+
+const openMap = () => {
+  store.toggle();
+};
+
+const handleToggle = () => {
+  store.toggleTradeMode();
+};
 </script>

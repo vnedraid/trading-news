@@ -1,8 +1,11 @@
 <template>
   <div class="flex-auto bg-gray-50 p-6 w-full">
     <div class="flex gap-6 h-full w-full">
-      <ResizablePanelGroup direction="horizontal">
-        <ResizablePanel :default-size="70" :min-size="20">
+      <ResizablePanelGroup direction="horizontal" :key="key">
+        <ResizablePanel
+          :default-size="70"
+          :min-size="defaultValuesForResize.left"
+        >
           <!-- Main Content Container -->
           <Card class="lg:col-span-3 gap-4 mr-3 h-full">
             <CardHeader>
@@ -94,7 +97,9 @@
           </Card>
         </ResizablePanel>
         <ResizableHandle with-handle />
-        <ResizablePanel :default-size="30" :min-size="20"
+        <ResizablePanel
+          :default-size="30"
+          :min-size="defaultValuesForResize.right"
           ><!-- News Feed Sidebar -->
           <Card class="lg:col-span-1 min-h-[500px] ml-3 h-full">
             <CardContent class="h-full overflow-hidden">
@@ -134,7 +139,7 @@
         >
       </ResizablePanelGroup>
 
-      <Card class="lg:col-span-1 min-h-[500px] gap-0">
+      <Card v-if="store.visibile" class="lg:col-span-1 min-h-[500px] gap-0">
         <CardHeader>
           <CardTitle class="pb-0"> Тепловая карта </CardTitle>
         </CardHeader>
@@ -162,7 +167,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { onMounted } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { Badge } from "@/components/ui/badge";
 import { TrendingDown, TrendingUp } from "lucide-vue-next";
 import { Separator } from "@/components/ui/separator";
@@ -180,6 +185,7 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import { storeToRefs } from "pinia";
 
 enum FORECAST {
   POSITIVE = "positive",
@@ -189,6 +195,25 @@ enum FORECAST {
 
 defineProps<{ summary: Root }>();
 
+const defaultValuesForResize = ref({
+  left: 70,
+  right: 30,
+});
+
+const store = useSummaryStore();
+const { tradeMode } = storeToRefs(store);
+const key = ref(crypto.randomUUID());
+
+watch(tradeMode, (newValue) => {
+  if (newValue) {
+    defaultValuesForResize.value.left = 20;
+    defaultValuesForResize.value.right = 80;
+  } else {
+    defaultValuesForResize.value.left = 70;
+    defaultValuesForResize.value.right = 30;
+  }
+  key.value = crypto.randomUUID();
+});
 const series = [
   {
     data: [
